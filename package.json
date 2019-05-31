@@ -1,9 +1,9 @@
 {
-  "name": "lewis-gatsby-starter-blog",
-  "private": true,
-  "description": "A custom Gatsby starter template to start a new blog or personal website.",
+  "name": "olympiabukkakis",
+  "private": false,
+  "description": "Static portfolio website for Olympia Bukakkis",
   "version": "0.1.0",
-  "author": "Lewis Llobera <billobera@gmail.com>",
+  "author": "Vincent Reynaud <vincentreynaud.de@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.2",
@@ -37,7 +37,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
