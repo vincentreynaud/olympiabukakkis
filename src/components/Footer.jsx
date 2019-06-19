@@ -79,25 +79,25 @@ class Footer extends Component {
 
   toggleFooter = () => {
     if (this.state.scrollDown && this.isPageBottom()) {
-      this.show();
+      this.show(this.state.footer);
     } else if (!this.state.scrollDown) {
-      this.hide();
+      this.hide(this.state.footer);
     }
 
     // this.setState({ updated: false });
   };
 
-  show = () => {
-    if (this.state.footer.classList.contains("footer-hide")) {
-      this.state.footer.classList.remove("footer-hide");
-      this.state.footer.classList.add("footer-show");
+  show = el => {
+    if (el.classList.contains("footer-hide")) {
+      el.classList.remove("footer-hide");
+      el.classList.add("footer-show");
     }
   };
 
-  hide = () => {
-    if (this.state.footer.classList.contains("footer-show") || !this.state.footer.classList.contains("footer-hide")) {
-      this.state.footer.classList.remove("footer-show");
-      this.state.footer.classList.add("footer-hide");
+  hide = el => {
+    if (el.classList.contains("footer-show") || !el.classList.contains("footer-hide")) {
+      el.classList.remove("footer-show");
+      el.classList.add("footer-hide");
     }
   };
 
