@@ -1,0 +1,56 @@
+@import "../scss/variables";
+@import "../scss/colors";
+@import "../scss/mixins";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+#footer {
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  height: $footer-height-mobile;
+  padding-top: $footer-py;
+  padding-bottom: $footer-py;
+  @include padding-screen-x();
+  transition: bottom 0.1s ease-in;
+
+  @media (min-width: 581px) {
+    height: $footer-height;
+  }
+
+  &.footer-show {
+    bottom: 0;
+  }
+
+  &.footer-hide {
+    bottom: calc(#{$footer-height-mobile} * -1);
+
+    @media (min-width: 581px) {
+      bottom: calc(#{$footer-height} * -1);
+    }
+  }
+
+  .footer-credit {
+    a {
+      color: $white;
+
+      &:hover {
+        color: $pink;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+.bg-light {
+  #footer {
+    .footer-credit {
+      a {
+        color: $black !important;
+
+        &:hover {
+          color: $blue !important;
+        }
+      }
+    }
+  }
+}

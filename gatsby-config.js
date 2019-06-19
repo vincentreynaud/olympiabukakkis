@@ -3,7 +3,8 @@ module.exports = {
     title: "Olympia Bukakkis",
     description: "Olympia Bukakkis' static portfolio website",
     author: "Vincent Reynaud <mail@vincentreynaud.de>",
-    siteUrl: "https://olympiabukakkis.com/"
+    siteUrl: "https://olympiabukakkis.com/",
+    sections: ["events", "work"]
   },
   plugins: [
     "gatsby-plugin-react-helmet",

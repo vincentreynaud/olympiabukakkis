@@ -1,0 +1,115 @@
+@import "../scss/variables";
+// @import "../scss/mixins";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.navbar {
+  z-index: 1010;
+  padding-top: $navbar-py;
+  padding-bottom: $navbar-py;
+  @include padding-screen-x();
+  background: linear-gradient(rgba($black, 0.8) 25%, rgba($black, 0.6) 50%, rgba($black, 0.4) 75%, transparent);
+
+  @include media-breakpoint-up(md) {
+    padding-top: $navbar-py-md;
+    padding-bottom: $navbar-py-md;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+    position: fixed;
+    background: transparent;
+    padding-top: $navbar-py-lg;
+    padding-bottom: $navbar-py-lg;
+    padding-right: 0; // to allow content bleed
+    // to reset setting for faded bg
+  }
+
+  .navbar-brand {
+    @include logo-height();
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.8rem 0.4rem 0.4rem 0.4rem;
+    font-size: $font-size-base;
+    color: $navbar-toggler-color;
+
+    @include media-breakpoint-up(sm) {
+      font-size: $font-size-md;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .nav-list {
+    display: block;
+    width: 100%;
+    padding-top: $logo-mb - 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding-top: $logo-mb - 0.3rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 0;
+    }
+
+    .nav-item {
+      .nav-link {
+        font-size: $font-size-link-xxl;
+        font-weight: $font-weight-title;
+        letter-spacing: $letter-spacing-sm;
+        line-height: 1.5;
+        display: inline;
+        padding: 0;
+
+        font-size: $font-size-lg - 0.4rem;
+
+        @include media-breakpoint-up(md) {
+          font-size: $font-size-lg - 0.2rem;
+        }
+        // not working
+        @include media-breakpoint-up(lg) {
+          font-size: $font-size-lg - 0.1rem;
+        }
+
+        // to include 15 inches devices
+        @media (min-width: 1441px) {
+          font-size: $font-size-lg;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    .dropdown-toggle {
+      &::after {
+        content: none;
+      }
+    }
+
+    .dropdown-menu {
+      position: static !important;
+      padding: 0 0 1rem 1.2rem;
+      border: none;
+      border-radius: 0px;
+      margin: 0;
+
+      .dropdown-item {
+        padding: 0;
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+
+  &.nav-max {
+    @include media-breakpoint-up(xl) {
+      max-width: 365px;
+    }
+  }
+}
