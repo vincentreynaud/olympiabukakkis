@@ -1,0 +1,111 @@
+/* =======================
+    COLORS
+======================= */
+
+$white: #ffffff;
+$black: #000000;
+$pink: #df1a9d;
+
+/* =======================
+    FONT FAMILY
+======================= */
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700");
+$font-family-lecken: "Josefin Sans", "Gill Sans", Arial, sans-serif;
+
+/* =======================
+    FONT WEIGHT
+======================= */
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$font-weight-body: $font-weight-normal;
+$font-weight-title: $font-weight-semi-bold;
+
+/* =======================
+    FONT SIZE
+======================= */
+
+$font-size-base: 1.2rem; // bigger for about??
+$font-size-md: 1.4rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2.2rem;
+
+$font-size-body: $font-size-base;
+$font-size-h2: 2rem;
+$font-size-h1: $font-size-xl;
+
+$font-size-link-xxl: $font-size-h2;
+$font-size-link-timeline: $font-size-md;
+
+/* =======================
+    SPACING
+======================= */
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-link-timeline: $line-height-sm;
+$line-height-btn-landing: $line-height-sm;
+
+$letter-spacing-base: 0.18rem;
+$letter-spacing-base-md: 0.2rem;
+$letter-spacing-sm: 0.08rem; // for nav-links
+
+/* =======================
+    LAYOUT
+======================= */
+
+$grid-gutter-width: 0px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1920px
+);
+
+// lg up are used to make the container narrower to fit with the layout
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 768px,
+  xl: 785px,
+  xxl: 885px,
+  xxxl: 990px
+);
+
+$border-width: 2px;
+
+$col-nav-max-width-xl: 380px;
+$col-nav-max-width-xxl: 420px;
+
+$logo-height: 2.6rem;
+$logo-height-sm: 3.15rem;
+$logo-height-md: 3.8rem;
+$logo-height-lg: 4rem;
+$logo-height-xl: 4.6rem;
+$logo-height-xxl: 4.9rem;
+$logo-mb: 2rem;
+
+$navbar-py: 1.2rem;
+$navbar-py-md: 1.3rem;
+$navbar-py-lg: 2.5rem;
+
+$navbar-toggler-color: $text-light;
+
+$main-pb: 4rem; // resolve padding bottom
+$main-pl: 2rem;
+$main-pr: 0;
+$main-pb-lg: 5rem; // resolve padding bottom
+$main-pl-lg: 3rem;
+
+$footer-py: 1rem;
+$footer-text-height: calc(#{$font-size-body} * #{$line-height-base});
+$footer-padding-height: calc(#{$footer-py} * 2);
+$footer-height: calc(#{$footer-text-height} + #{$footer-padding-height});
+$footer-height-mobile: calc(calc(#{$footer-text-height} * 2) + #{$footer-padding-height});
