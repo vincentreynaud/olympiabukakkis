@@ -61,7 +61,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
-    "gatsby-plugin-styled-components",
+    "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-robots-txt"
   ]
