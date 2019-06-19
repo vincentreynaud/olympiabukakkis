@@ -1,0 +1,67 @@
+// Responsive body padding on X axis
+@mixin padding-screen-x() {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+// Responsive body padding left
+@mixin padding-screen-l() {
+  padding-left: 0.9rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 1.1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: 1.2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 1.5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 3rem;
+  }
+}
+
+// Responsive body padding right
+@mixin padding-screen-r() {
+  padding-right: 0.9rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-right: 1.1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-right: 1.2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 1.5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-right: 3rem;
+  }
+}

@@ -31,4 +31,4 @@ function formatTitle(title, format = "url") {
   }
 }
 
-export default { capitalise, formatTitle };
+export { capitalise, formatTitle };
