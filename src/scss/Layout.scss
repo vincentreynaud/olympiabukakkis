@@ -1,3 +1,99 @@
-@import "../scss/variables";
-@import "../scss/mixins";
-@import "../scss/bootstrap-custom";
+@import "variables";
+@import "mixins";
+@import "helpers";
+@import "bootstrap-custom";
+
+/* =======================
+    GLOBAL
+======================= */
+
+body {
+  // font-family: $font-family-lecken;
+  font-weight: $font-weight-body;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing-base;
+  color: $dark;
+
+  @include media-breakpoint-up(md) {
+    letter-spacing: $letter-spacing-base-md;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-title;
+}
+
+// h1 {
+//   @include font-size-responsive-high($font-size-h1);
+// }
+
+// h2 {
+//   @include font-size-responsive-high($font-size-h2);
+// }
+
+// h3 {
+//   @include font-size-responsive-low($font-size-md);
+// }
+
+// p {
+//   @include font-size-responsive-base($font-size-body);
+// }
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $link-active-color;
+  }
+}
+
+/* =======================
+    LAYOUT
+======================= */
+
+.layout {
+  .col-nav {
+    @include media-breakpoint-up(xl) {
+      height: 100vh;
+      max-width: $col-nav-max-width-xl;
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: $col-nav-max-width-xxl;
+    }
+  }
+
+  .col-main {
+    @include media-breakpoint-up(xl) {
+      min-width: calc(100% - #{$col-nav-max-width-xl});
+    }
+
+    @include media-breakpoint-up(xxl) {
+      min-width: calc(100% - #{$col-nav-max-width-xxl});
+    }
+  }
+}
+
+.main {
+  padding-top: 2.5rem;
+  padding-bottom: $main-pb;
+  @include padding-screen-l();
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: $main-pb-lg;
+  }
+}
+
+// To restore the padding right missing from main
+.pr-main {
+  @include padding-screen-r();
+}

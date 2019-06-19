@@ -7,7 +7,6 @@
   padding-top: $navbar-py;
   padding-bottom: $navbar-py;
   @include padding-screen-x();
-  background: linear-gradient(rgba($black, 0.8) 25%, rgba($black, 0.6) 50%, rgba($black, 0.4) 75%, transparent);
 
   @include media-breakpoint-up(md) {
     padding-top: $navbar-py-md;

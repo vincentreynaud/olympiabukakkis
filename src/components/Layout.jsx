@@ -13,12 +13,12 @@ function Layout({ children }) {
       query={query}
       render={data => {
         return (
-          <div className="layout bg">
+          <div className="layout">
             <div className="row">
               <div className="col-nav col-xl-4">
                 <Navigation links={data.site.siteMetadata.sections} title={data.site.siteMetadata.title} />
               </div>
-              <div className="col-main col-xl-8 position-static">
+              <div className="col-main col-xl-8">
                 <main className="main">{children}</main>
               </div>
             </div>

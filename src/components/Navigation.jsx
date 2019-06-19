@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "gatsby";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
 
-import { capitalise, formatTitle } from "../helpers/es6";
+import { capitalise } from "../helpers/es6";
 import "../scss/Navigation.scss";
 
 class Navigation extends Component {
@@ -28,16 +28,16 @@ class Navigation extends Component {
     const { links, title } = this.props;
 
     return (
-      <Navbar expand="xl">
+      <Navbar expand="xl" className="flex-column align-items-start">
         <div className="d-flex justify-content-between align-items-center w-100">
-          <NavbarBrand href="/">{title}</NavbarBrand>
+          <NavbarBrand href="/about">{title}</NavbarBrand>
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="nav-list" id="site-nav" navbar>
             {links.map((link, i) => (
               <NavItem key={i}>
-                <Link className="nav-link" to={`/${formatTitle(links[i])}`} activeClassName="active">
+                <Link className="nav-link" to={`#${links[i]}`} activeClassName="active">
                   {capitalise(link)}
                 </Link>
               </NavItem>

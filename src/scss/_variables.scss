@@ -5,10 +5,17 @@
 $white: #ffffff;
 $black: #000000;
 $pink: #df1a9d;
-$blue: #3527b3;
+$blue: #4138c5;
+$deep-blue: #3527b3;
 
-$light-grey: #f9f9f9;
-$text-light: $light-grey;
+$light: #f9f9f9;
+$dark: $black;
+
+$link-color: $blue;
+$link-active-color: $deep-blue;
+$link-hover-color: $deep-blue;
+
+$navbar-toggler-color: $dark;
 
 /* =======================
     FONT FAMILY
@@ -99,8 +106,6 @@ $logo-mb: 2rem;
 $navbar-py: 1.2rem;
 $navbar-py-md: 1.3rem;
 $navbar-py-lg: 2.5rem;
-
-$navbar-toggler-color: $text-light;
 
 $main-pb: 4rem; // resolve padding bottom
 $main-pl: 2rem;
