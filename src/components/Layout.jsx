@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from "gatsby";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
+import "../scss/Layout.scss";
+
 function Layout({ children }) {
   return (
     <StaticQuery
@@ -14,7 +16,7 @@ function Layout({ children }) {
           <div className="layout bg">
             <div className="row">
               <div className="col-nav col-xl-4">
-                <Navigation links={data.site.siteMetadata.sections} />
+                <Navigation links={data.site.siteMetadata.sections} title={data.site.siteMetadata.title} />
               </div>
               <div className="col-main col-xl-8 position-static">
                 <main className="main">{children}</main>
@@ -34,6 +36,7 @@ const query = graphql`
   query {
     site {
       siteMetadata {
+        title
         sections
         author
       }
