@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Vincent Reynaud <vincentreynaud.de@gmail.com>",
   "dependencies": {
+    "animejs": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.2",
