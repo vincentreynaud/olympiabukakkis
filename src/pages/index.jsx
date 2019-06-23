@@ -9,22 +9,30 @@ function Index({ data }) {
     <>
       <SEO />
       <Layout>
-        <div>
-          <div>Lewis Gatsby Starter Blog</div>
-          <div>This is a custom Gatsby starter template to start a new blog or personal website.</div>
-        </div>
+        <section id="hero">
+          <h1>Olympia Bukakkis</h1>
+        </section>
         <section id="work">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Link to={node.fields.slug}>
-              <div key={node.id}>
-                <div>{node.frontmatter.title}</div>
-                <div>{node.excerpt}</div>
-                <div>{node.frontmatter.date}</div>
-              </div>
+          {data.work.edges.map(({ node }) => (
+            <Link to={node.fields.slug} key={node.id}>
+              <h1>{node.frontmatter.title}</h1>
+              <p>
+                <small>{node.frontmatter.date}</small>
+              </p>
+              <div>{node.frontmatter.description}</div>
             </Link>
           ))}
         </section>
-        <section id="events">stuff</section>
+        <section id="events">
+          {data.events.edges.map(({ node }) => (
+            <Link to={node.fields.slug} key={node.id}>
+              <h1>{node.frontmatter.title}</h1>
+              <p>
+                <small>{node.frontmatter.date}</small>
+              </p>
+            </Link>
+          ))}
+        </section>
       </Layout>
     </>
   );
@@ -32,18 +40,44 @@ function Index({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    work: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "work" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           id
           frontmatter {
+            id
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
+            description
           }
           fields {
             slug
           }
           excerpt
+        }
+      }
+    }
+    events: allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "event" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            id
+            title
+            date(formatString: "DD MMMM YYYY")
+            venue
+            description
+            link
+          }
+          fields {
+            slug
+          }
         }
       }
     }
