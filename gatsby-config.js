@@ -4,7 +4,7 @@ module.exports = {
     description: "Olympia Bukakkis' static portfolio website",
     author: "Vincent Reynaud <mail@vincentreynaud.de>",
     siteUrl: "https://olympiabukakkis.com/",
-    sections: ["events", "work"]
+    sections: ["work", "events"]
   },
   plugins: [
     "gatsby-plugin-react-helmet",

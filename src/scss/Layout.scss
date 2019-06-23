@@ -48,12 +48,8 @@ a {
   color: $link-color;
 
   &:hover {
-    color: $light;
+    color: rgba($blue, 0.5);
     text-decoration: none;
-
-    div {
-      background-color: $link-color;
-    }
   }
 
   &.active {
@@ -113,11 +109,15 @@ li {
   @include padding-screen-r();
 }
 
+#hero {
+  height: 100vh;
+}
+
 #work {
-  height: 120vh;
+  margin-bottom: 8rem;
 }
 
 #events {
-  background: $blue;
+  // background: $blue;
   height: 80vh;
 }
