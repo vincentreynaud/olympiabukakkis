@@ -13,15 +13,18 @@ function Blog({ data }) {
           <div>Lewis Gatsby Starter Blog</div>
           <div>This is a custom Gatsby starter template to start a new blog or personal website.</div>
         </div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug}>
-            <div key={node.id}>
-              <div>{node.frontmatter.title}</div>
-              <div>{node.excerpt}</div>
-              <div>{node.frontmatter.date}</div>
-            </div>
-          </Link>
-        ))}
+        <section id="work">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <Link to={node.fields.slug}>
+              <div key={node.id}>
+                <div>{node.frontmatter.title}</div>
+                <div>{node.excerpt}</div>
+                <div>{node.frontmatter.date}</div>
+              </div>
+            </Link>
+          ))}
+        </section>
+        <section id="events">stuff</section>
       </Layout>
     </>
   );

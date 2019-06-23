@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
+import Scrollspy from "react-scrollspy";
 
 import { capitalise } from "../helpers/es6";
 import "../scss/Navigation.scss";
@@ -34,7 +35,7 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="nav-list" id="site-nav" navbar>
+          <Scrollspy items={links} className="navbar-nav ml-auto nav-list" currentClassName="active" offset={-80}>
             {links.map((link, i) => (
               <NavItem key={i}>
                 <Link className="nav-link" to={`#${links[i]}`} activeClassName="active">
@@ -42,7 +43,7 @@ class Navigation extends Component {
                 </Link>
               </NavItem>
             ))}
-          </Nav>
+          </Scrollspy>
         </Collapse>
       </Navbar>
     );

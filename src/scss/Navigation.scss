@@ -15,8 +15,7 @@
 
   @include media-breakpoint-up(xl) {
     display: block;
-    position: fixed;
-    background: transparent;
+    position: fixed !important;
     padding-top: $navbar-py-lg;
     padding-bottom: $navbar-py-lg;
     padding-right: 0; // to allow content bleed

@@ -53,7 +53,18 @@ a {
   }
 
   &.active {
-    color: $link-active-color;
+    color: $light;
+    background: $link-color;
+  }
+}
+
+// quick fix
+li {
+  &.active {
+    a {
+      color: $light;
+      background: $link-color;
+    }
   }
 }
 
@@ -96,4 +107,13 @@ a {
 // To restore the padding right missing from main
 .pr-main {
   @include padding-screen-r();
+}
+
+#work {
+  height: 120vh;
+}
+
+#events {
+  background: $blue;
+  height: 80vh;
 }
