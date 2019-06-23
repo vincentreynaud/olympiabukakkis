@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import HeaderBack from "../components/HeaderBack";
+import Close from "../components/Close";
 import SEO from "../components/SEO";
 
 export default ({ data }) => {
@@ -11,7 +11,7 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={post.frontmatter.title} />
-      <HeaderBack />
+      <Close />
       <Layout>
         <div>{post.frontmatter.title}</div>
         <div>{post.frontmatter.date}</div>
