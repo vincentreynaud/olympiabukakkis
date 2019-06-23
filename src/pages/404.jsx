@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-function NotFoundPage() {
+function NotFound() {
   return (
     <>
       <SEO title="404: Not found" />
@@ -26,4 +26,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default NotFound;

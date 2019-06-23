@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Close from "../components/Close";
 
-function Info({ data }) {
+function About({ data }) {
   return (
     <>
       <SEO title="About" />
@@ -37,7 +37,7 @@ function Info({ data }) {
   );
 }
 
-export default Info;
+export default About;
 
 export const query = graphql`
   query {

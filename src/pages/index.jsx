@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-function Blog({ data }) {
+function Index({ data }) {
   return (
     <>
       <SEO />
@@ -50,4 +50,4 @@ export const query = graphql`
   }
 `;
 
-export default Blog;
+export default Index;
