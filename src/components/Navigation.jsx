@@ -35,7 +35,7 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Scrollspy items={links} className="navbar-nav ml-auto nav-list" currentClassName="active" offset={-80}>
+          <Scrollspy items={links} className="navbar-nav ml-auto nav-list" currentClassName="active" offset={-20}>
             {links.map((link, i) => (
               <NavItem key={i}>
                 <Link className="nav-link" to={`#${links[i]}`} activeClassName="active">

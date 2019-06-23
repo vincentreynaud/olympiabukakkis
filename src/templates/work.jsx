@@ -11,8 +11,8 @@ export default ({ data }) => {
   return (
     <>
       <SEO title={post.frontmatter.title} />
-      <Close />
       <Layout>
+        <Close />
         <div>{post.frontmatter.title}</div>
         <div>{post.frontmatter.date}</div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -27,7 +27,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "Do MMMM YYYY")
       }
     }
   }

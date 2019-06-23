@@ -1,6 +1,7 @@
 ---
 type: "work"
 title: "Gender Euphoria: Drag as a Construction Site for New Gender Realities"
+id: "gender-euphoria"
 date: "2019-01-18"
 description: "GENDER EUPHORIA has evolved through many forms. Originally conceived as a book chapter, then developed into a lecture, then a university presentation, and finally into the piece this evening, it is a critical discussion of gender, in drag." 
 ---

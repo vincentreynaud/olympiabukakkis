@@ -48,8 +48,12 @@ a {
   color: $link-color;
 
   &:hover {
-    color: $link-hover-color;
+    color: $light;
     text-decoration: none;
+
+    div {
+      background-color: $link-color;
+    }
   }
 
   &.active {

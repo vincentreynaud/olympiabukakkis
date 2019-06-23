@@ -1,6 +1,7 @@
 ---
 type: "work"
 title: "Get Fucked"
+id: "get-fucked"
 date: "2019-03-01"
 description: "Get Fucked
 
