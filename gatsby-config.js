@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Olympia Bukakkis",
-    description: "Olympia Bukakkis' static portfolio website",
+    title: "Olympia Bukkakis",
+    description: "Olympia Bukkakis' static portfolio website",
     author: "Vincent Reynaud <mail@vincentreynaud.de>",
-    siteUrl: "https://olympiabukakkis.com/",
+    siteUrl: "https://olympiabukkakis.com/",
     sections: ["work", "events"]
   },
   plugins: [
