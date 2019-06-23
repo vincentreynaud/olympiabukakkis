@@ -40,15 +40,13 @@
   }
 }
 
-.bg-light {
-  #footer {
-    .footer-credit {
-      a {
-        color: $black !important;
+#footer {
+  .footer-credit {
+    a {
+      color: $black !important;
 
-        &:hover {
-          color: $blue !important;
-        }
+      &:hover {
+        color: $blue !important;
       }
     }
   }
