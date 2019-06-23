@@ -29,7 +29,7 @@ class Index extends Component {
   }
 
   scaleBrand = e => {
-    if (window.scrollY > this.state.hero.scrollHeight - 40) {
+    if (window.scrollY > this.state.hero.scrollHeight - 400) {
       this.scaleDown();
       // anime({
       //   targets: ".navbar-brand",
@@ -79,8 +79,8 @@ class Index extends Component {
               </h1>
             </Link>
           </section>
-          <section id="work">
-            {data.work.edges.map(({ node }) => (
+          <section id="works">
+            {data.works.edges.map(({ node }) => (
               <Link to={node.fields.slug} key={node.id}>
                 <h1>{node.frontmatter.title}</h1>
                 <p>
@@ -98,7 +98,7 @@ class Index extends Component {
 
 export const query = graphql`
   query {
-    work: allMarkdownRemark(
+    works: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "work" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {

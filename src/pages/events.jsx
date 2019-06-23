@@ -6,13 +6,15 @@ import Back from "../components/Back";
 import SEO from "../components/SEO";
 
 function Events({ data }) {
+  const { events } = data;
+
   return (
     <>
       <SEO title="Events" />
       <Layout>
         <Back />
         <section id="events">
-          {data.events.edges.map(({ node }) => (
+          {events.edges.map(({ node }) => (
             <Link to={node.fields.slug} key={node.id}>
               <h1>{node.frontmatter.title}</h1>
               <p>

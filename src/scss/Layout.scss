@@ -117,17 +117,17 @@ li {
     top: 1rem;
     left: 1rem;
     font-size: 7.2rem;
-    animation: all 2s ease-in-out;
+    animation: opacity 2s ease-in-out;
 
     &.scale-up {
-      transform: scale(1);
-      transform-origin: left;
+      // transform: scale(1);
+      // transform-origin: left;
       opacity: 1;
     }
 
     &.scale-down {
-      transform: scale(0.25);
-      transform-origin: left;
+      // transform: scale(0.25);
+      // transform-origin: left;
       opacity: 0;
     }
   }
