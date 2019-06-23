@@ -111,6 +111,24 @@ li {
 
 #hero {
   height: 100vh;
+
+  #hero-brand {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 7.2rem;
+    animation: all 2s ease-in-out;
+
+    &.scale-up {
+      transform: scale(1);
+      transform-origin: left;
+    }
+
+    &.scale-down {
+      transform: scale(0.25);
+      transform-origin: left;
+    }
+  }
 }
 
 #work {
@@ -119,5 +137,5 @@ li {
 
 #events {
   // background: $blue;
-  height: 80vh;
+  height: 200vh;
 }

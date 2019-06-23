@@ -13,7 +13,7 @@ function Layout({ children }) {
       query={query}
       render={data => {
         return (
-          <div className="layout">
+          <div className="layout position-relative">
             <div className="row">
               <div className="col-nav col-xl-4">
                 <Navigation links={data.site.siteMetadata.sections} title={data.site.siteMetadata.title} />
