@@ -7,30 +7,20 @@ import SEO from "../components/SEO";
 import Back from "../components/Back";
 
 function About({ data }) {
+  const { about, aboutPicture } = data;
   return (
     <>
       <SEO title="About" />
       <Layout>
         <Back />
-        <div>About</div>
+        <h2>{about.frontmatter.name}</h2>
         <div>
-          <Img fluid={data.RandomPhoto.childImageSharp.fluid} />
+          <Img fluid={aboutPicture.childImageSharp.fluid} />
         </div>
+        <div dangerouslySetInnerHTML={{ __html: about.html }} />
+
         <div>
-          Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand
-          so an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he greater related
-          adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old.
-          <br />
-          <br />
-          Bringing so sociable felicity supplied mr. September suspicion far him two acuteness perfectly. Covered as an
-          examine so regular of. Ye astonished friendship remarkably no. Window admire matter praise you bed whence.
-          Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet
-          sixteen yet blushes. Entire its the did figure wonder off.
-        </div>
-        <div>
-          <a href="mailto:your&#64;email.com">
-            <div>Get in touch</div>
-          </a>
+          <a href="mailto:your&#64;email.com">mail@olympiabukkakis.com</a>
         </div>
       </Layout>
     </>
@@ -41,10 +31,17 @@ export default About;
 
 export const query = graphql`
   query {
-    RandomPhoto: file(relativePath: { eq: "RandomPhoto.jpg" }) {
+    about: markdownRemark(frontmatter: { type: { eq: "about" } }) {
+      id
+      html
+      frontmatter {
+        name
+      }
+    }
+    aboutPicture: file(relativePath: { eq: "RandomPhoto.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1400) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
