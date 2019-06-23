@@ -90,16 +90,6 @@ class Index extends Component {
               </Link>
             ))}
           </section>
-          <section id="events">
-            {data.events.edges.map(({ node }) => (
-              <Link to={node.fields.slug} key={node.id}>
-                <h1>{node.frontmatter.title}</h1>
-                <p>
-                  <small>{node.frontmatter.date}</small>
-                </p>
-              </Link>
-            ))}
-          </section>
         </Layout>
       </>
     );
@@ -120,28 +110,6 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM YYYY")
             description
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-    events: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "event" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            id
-            title
-            date(formatString: "DD MMMM YYYY")
-            venue
-            description
-            link
           }
           fields {
             slug

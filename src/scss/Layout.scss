@@ -122,11 +122,13 @@ li {
     &.scale-up {
       transform: scale(1);
       transform-origin: left;
+      opacity: 1;
     }
 
     &.scale-down {
       transform: scale(0.25);
       transform-origin: left;
+      opacity: 0;
     }
   }
 }

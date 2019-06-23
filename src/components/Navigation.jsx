@@ -36,13 +36,16 @@ class Navigation extends Component {
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Scrollspy items={links} className="navbar-nav ml-auto nav-list" currentClassName="active">
-            {links.map((link, i) => (
-              <NavItem key={i}>
-                <Link className="nav-link" to={`#${links[i]}`} activeClassName="active">
-                  {capitalise(link)}
-                </Link>
-              </NavItem>
-            ))}
+            <NavItem>
+              <Link className="nav-link" to="#work" activeClassName="active">
+                Work
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/events" activeClassName="active">
+                Events
+              </Link>
+            </NavItem>
           </Scrollspy>
         </Collapse>
       </Navbar>
@@ -51,3 +54,11 @@ class Navigation extends Component {
 }
 
 export default Navigation;
+
+// {links.map((link, i) => (
+//   <NavItem key={i}>
+//     <Link className="nav-link" to={`/${links[i]}`} activeClassName="active">
+//       {capitalise(link)}
+//     </Link>
+//   </NavItem>
+// ))}
