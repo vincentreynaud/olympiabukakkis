@@ -16,7 +16,7 @@ function Layout({ children }) {
           <div className="layout position-relative">
             <div className="row">
               <div className="col-nav col-xl-4">
-                <Navigation links={data.site.siteMetadata.sections} title={data.site.siteMetadata.title} />
+                <Navigation title={data.site.siteMetadata.title} />
               </div>
               <div className="col-main col-xl-8">
                 <main className="main">{children}</main>
@@ -37,7 +37,6 @@ const query = graphql`
     site {
       siteMetadata {
         title
-        sections
         author
       }
     }

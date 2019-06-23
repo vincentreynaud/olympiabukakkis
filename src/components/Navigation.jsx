@@ -26,7 +26,7 @@ class Navigation extends Component {
   };
 
   render() {
-    const { links, title } = this.props;
+    const { title } = this.props;
 
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
@@ -35,9 +35,9 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Scrollspy items={links} className="navbar-nav ml-auto nav-list" currentClassName="active">
+          <Scrollspy items={["works", "events"]} className="navbar-nav ml-auto nav-list" currentClassName="active">
             <NavItem>
-              <Link className="nav-link" to="#work" activeClassName="active">
+              <Link className="nav-link" to="#works" activeClassName="active">
                 Work
               </Link>
             </NavItem>
