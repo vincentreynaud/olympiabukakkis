@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Close from "../components/Close";
+import Back from "../components/Back";
 import SEO from "../components/SEO";
 
 export default ({ data }) => {
@@ -12,7 +12,7 @@ export default ({ data }) => {
     <>
       <SEO title={post.frontmatter.title} />
       <Layout>
-        <Close />
+        <Back />
         <h1>{post.frontmatter.title}</h1>
         <h2>{post.frontmatter.date}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

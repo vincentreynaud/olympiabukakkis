@@ -4,14 +4,14 @@ import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Close from "../components/Close";
+import Back from "../components/Back";
 
 function About({ data }) {
   return (
     <>
       <SEO title="About" />
       <Layout>
-        <Close />
+        <Back />
         <div>About</div>
         <div>
           <Img fluid={data.RandomPhoto.childImageSharp.fluid} />
