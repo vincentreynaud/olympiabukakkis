@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import Image from "gatsby-image";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
 
 class Index extends Component {
@@ -67,7 +68,9 @@ class Index extends Component {
   };
 
   render() {
-    const { data } = this.props;
+    const { works, pictures } = this.props.data;
+    // const workPictures = pictures.edges.filter(({ node }) => node.frontmatter.type === "work");
+
     return (
       <>
         <SEO />
@@ -80,15 +83,30 @@ class Index extends Component {
             </Link>
           </section>
           <section id="works">
-            {data.works.edges.map(({ node }) => (
-              <Link to={node.fields.slug} key={node.id}>
-                <h1>{node.frontmatter.title}</h1>
-                <p>
-                  <small>{node.frontmatter.date}</small>
-                </p>
-                <div>{node.frontmatter.description}</div>
-              </Link>
-            ))}
+            {works.edges.map(({ node }) => {
+              const workRegex = new RegExp(node.frontmatter.id, "i");
+              const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
+
+              return (
+                <Link to={node.fields.slug} key={node.id}>
+                  <div className="work mb-5">
+                    {typeof picture !== "undefined" && (
+                      <Image
+                        fixed={picture.node.childImageSharp.fixed}
+                        alt={`${node.frontmatter.title} picture`}
+                        style={{ width: "800px", height: "500px" }}
+                        imgStyle={{}}
+                      />
+                    )}
+                    <h1>{node.frontmatter.title}</h1>
+                    <p>
+                      <small>{node.frontmatter.date}</small>
+                    </p>
+                    <p>{node.frontmatter.description}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </section>
         </Layout>
       </>
@@ -113,6 +131,19 @@ export const query = graphql`
           }
           fields {
             slug
+          }
+        }
+      }
+    }
+    pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            fixed(height: 500) {
+              ...GatsbyImageSharpFixed_noBase64
+            }
           }
         }
       }

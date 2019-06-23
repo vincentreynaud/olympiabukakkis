@@ -55,7 +55,7 @@ export const query = graphql`
           id
           base
           childImageSharp {
-            fixed(height: 670) {
+            fixed(height: 500) {
               ...GatsbyImageSharpFixed_noBase64
             }
           }
