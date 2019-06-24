@@ -13,7 +13,7 @@ function Events({ data }) {
       <SEO title="Events" />
       <Layout>
         <Back />
-        <section id="events" className="container container-smx">
+        <section id="events" className="container container-sm">
           {events.edges.map(({ node }) => (
             <Link to={node.fields.slug} key={node.id}>
               <h1>{node.frontmatter.title}</h1>

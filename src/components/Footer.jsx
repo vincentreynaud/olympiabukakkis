@@ -104,17 +104,21 @@ class Footer extends Component {
   render() {
     return (
       <footer className="w-100 footer-hide row justify-content-between" id="footer">
-        <p className="mb-1 col-12 col-sm text-nowrap">Olympia Bukkakis &copy; {new Date().getFullYear()}</p>
+        <p className="mb-1 col-12 col-sm text-nowrap">
+          <small>Olympia Bukkakis &copy; {new Date().getFullYear()}</small>
+        </p>
         <p className="footer-credit">
-          With <span className="red">&#10084;</span> by{" "}
-          <a
-            rel="noopener noreferrer"
-            className="text-nowrap"
-            href="https://www.instagram.com/collectiveanxiety/"
-            target="_blank"
-          >
-            Vincent Reynaud
-          </a>
+          <small>
+            With <span className="red">&#10084;</span> by{" "}
+            <a
+              rel="noopener noreferrer"
+              className="text-nowrap"
+              href="https://www.instagram.com/collectiveanxiety/"
+              target="_blank"
+            >
+              Vincent Reynaud
+            </a>
+          </small>
         </p>
       </footer>
     );

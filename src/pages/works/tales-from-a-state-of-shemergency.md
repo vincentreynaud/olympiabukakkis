@@ -17,12 +17,12 @@ In her masters graduation piece,*Tales From a State of Shemergency*, Olympia Buk
 \* I know I look good in this dress.
  
 
-Performed and Created by Olympia Bukkakis
-Dramaturgy: Allison Wiltshire
-Sound Design: Collective Anxiety
-Video and Set Design: Camille Lacadee
-Lighting Design: Bryan Schall
-Costume Design: Alexander Mersmann
-Song Composition: Lyra Pramuk & Olympia Bukkakis
-Mentors: Melanie Jame Wolf and Johannes Paul Raether
-Tutor: Sandra Noeth
+Performed and Created by Olympia Bukkakis  
+Dramaturgy: Allison Wiltshire  
+Sound Design: Collective Anxiety  
+Video and Set Design: Camille Lacadee  
+Lighting Design: Bryan Schall  
+Costume Design: Alexander Mersmann  
+Song Composition: Lyra Pramuk & Olympia Bukkakis  
+Mentors: Melanie Jame Wolf and Johannes Paul Raether  
+Tutor: Sandra Noeth  
