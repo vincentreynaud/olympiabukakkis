@@ -1,11 +1,23 @@
-.position-relative {
-  position: relative;
+@import "../scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+// use bootstrap's list-unstyled for list-style: none
+
+.container-sm {
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+    max-width: 768px;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    max-width: 915px;
+  }
 }
 
-.position-static {
-  position: static;
-}
+.muted {
+  color: rgba($dark, 0.8);
 
-.list-item {
-  list-style: none;
+  &:hover {
+    color: inherit;
+  }
 }

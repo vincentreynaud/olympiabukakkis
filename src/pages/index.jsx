@@ -82,29 +82,29 @@ class Index extends Component {
               </h1>
             </Link>
           </section>
-          <section id="works">
+          <section id="work" className="container">
             {works.edges.map(({ node }) => {
               const workRegex = new RegExp(node.frontmatter.id, "i");
               const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
 
               return (
-                <Link to={node.fields.slug} key={node.id}>
-                  <div className="work mb-5">
+                <div className="work">
+                  <Link to={node.fields.slug} key={node.id}>
                     {typeof picture !== "undefined" && (
                       <Image
                         fixed={picture.node.childImageSharp.fixed}
                         alt={`${node.frontmatter.title} picture`}
-                        style={{ width: "800px", height: "500px" }}
+                        style={{ width: "100%", height: "50vmin", marginBottom: "0.75rem" }}
                         imgStyle={{}}
                       />
                     )}
-                    <h1>{node.frontmatter.title}</h1>
-                    <p>
-                      <small>{node.frontmatter.date}</small>
-                    </p>
-                    <p>{node.frontmatter.description}</p>
-                  </div>
-                </Link>
+                    <h2>
+                      {node.frontmatter.title} <small className="muted">&mdash; {node.frontmatter.date}</small>
+                    </h2>
+                  </Link>
+
+                  <p>{node.frontmatter.description}</p>
+                </div>
               );
             })}
           </section>
@@ -126,7 +126,7 @@ export const query = graphql`
           frontmatter {
             id
             title
-            date(formatString: "DD MMMM YYYY")
+            date(formatString: "DD MMM YYYY")
             description
           }
           fields {
