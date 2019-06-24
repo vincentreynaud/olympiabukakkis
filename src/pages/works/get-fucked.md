@@ -8,9 +8,7 @@ description: "Get Fucked
 1.	To take into oneself the body of another
 2.	To ascend to an altered/enlightened state
 3.	A command to either improve oneself or remove oneself from a situation." 
-
 video: ""
-
 ---
 
 Get Fucked

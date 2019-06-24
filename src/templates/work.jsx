@@ -9,7 +9,6 @@ import SEO from "../components/SEO";
 export default ({ data }) => {
   const { work, pictures } = data;
   const workRegex = new RegExp(work.frontmatter.id, "i");
-  console.log(workRegex);
   const workPictures = pictures.edges.filter(({ node }) => node.base.match(workRegex));
 
   return (
