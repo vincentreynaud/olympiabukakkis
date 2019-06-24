@@ -109,7 +109,7 @@ class Footer extends Component {
         </p>
         <p className="footer-credit">
           <small>
-            With <span className="red">&#10084;</span> by{" "}
+            Website by{" "}
             <a
               rel="noopener noreferrer"
               className="text-nowrap"

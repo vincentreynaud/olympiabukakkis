@@ -31,7 +31,7 @@ class Index extends Component {
 
   scaleBrand = e => {
     if (window.scrollY > this.state.hero.scrollHeight - 400) {
-      this.scaleDown();
+      this.scaleDown(this.state.heroBrand);
       // anime({
       //   targets: ".navbar-brand",
       //   scale: {
@@ -41,7 +41,7 @@ class Index extends Component {
       //   }
       // });
     } else {
-      this.scaleUp();
+      this.scaleUp(this.state.heroBrand);
       // anime({
       //   targets: ".navbar-brand",
       //   scale: {
@@ -53,17 +53,17 @@ class Index extends Component {
     }
   };
 
-  scaleUp = () => {
-    if (this.state.heroBrand.classList.contains("scale-down")) {
-      this.state.heroBrand.classList.remove("scale-down");
-      this.state.heroBrand.classList.add("scale-up");
+  scaleUp = el => {
+    if (el.classList.contains("scale-down")) {
+      el.classList.remove("scale-down");
+      el.classList.add("scale-up");
     }
   };
 
-  scaleDown = () => {
-    if (this.state.heroBrand.classList.contains("scale-up")) {
-      this.state.heroBrand.classList.remove("scale-up");
-      this.state.heroBrand.classList.add("scale-down");
+  scaleDown = el => {
+    if (el.classList.contains("scale-up") || !el.classList.contains("scale-down")) {
+      el.classList.remove("scale-up");
+      el.classList.add("scale-down");
     }
   };
 
@@ -77,7 +77,7 @@ class Index extends Component {
         <Layout>
           <section id="hero">
             <Link to="/about">
-              <h1 id="hero-brand" className="scale-up">
+              <h1 id="hero-brand" className="text-nowrap">
                 Olympia Bukkakis
               </h1>
             </Link>

@@ -21,7 +21,13 @@ function About({ data }) {
           <div dangerouslySetInnerHTML={{ __html: about.html }} />
 
           <div>
-            <a href="mailto:your&#64;email.com">mail@olympiabukkakis.com</a>
+            <a href="mailto:mail&#64;olympiabukkakis.com">
+              <span>mail</span>
+              <span>&#64;</span>
+              <span>olympia</span>
+              <span>bukkakkis</span>
+              <span>.com</span>
+            </a>
           </div>
         </section>
       </Layout>

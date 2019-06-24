@@ -27,27 +27,4 @@
       bottom: calc(#{$footer-height} * -1);
     }
   }
-
-  .footer-credit {
-    a {
-      color: $white;
-
-      &:hover {
-        color: $pink;
-        text-shadow: none;
-      }
-    }
-  }
-}
-
-#footer {
-  .footer-credit {
-    a {
-      color: $black !important;
-
-      &:hover {
-        color: $blue !important;
-      }
-    }
-  }
 }
