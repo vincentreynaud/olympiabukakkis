@@ -1,11 +1,15 @@
 @import "../scss/variables";
 @import "../scss/mixins";
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../node_modules/rfs/scss";
 
 .navbar {
   z-index: 1010;
+  position: fixed !important;
+  width: 100%;
   padding-top: $navbar-py;
   padding-bottom: $navbar-py;
+  background-color: $white;
   @include padding-screen-x();
 
   @include media-breakpoint-up(md) {
@@ -15,17 +19,18 @@
 
   @include media-breakpoint-up(xl) {
     display: block;
-    position: fixed !important;
+    width: auto;
     padding-top: $navbar-py-lg;
     padding-bottom: $navbar-py-lg;
     padding-right: 0; // to allow content bleed
     // to reset setting for faded bg
+    background-color: transparent;
   }
 
   .navbar-brand {
     font-weight: 600;
     font-size: 1.8rem;
-    margin-bottom: 8rem;
+    // margin-bottom: 8rem;
   }
 
   .navbar-toggler {
@@ -33,7 +38,7 @@
     border: none;
     padding: 0.8rem 0.4rem 0.4rem 0.4rem;
     color: $navbar-toggler-color;
-    }
+  }
 
   .nav-list {
     display: block;
