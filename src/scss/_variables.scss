@@ -15,14 +15,19 @@ $link-color: $dark;
 $link-active-color: $blue;
 $link-hover-color: $blue;
 
-$navbar-toggler-color: $dark;
-
 /* =======================
     FONT FAMILY
 ======================= */
 
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700");
-$font-family-lecken: "Josefin Sans", "Gill Sans", Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Biryani:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Hind:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Gudea:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,600,700");
+
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700");
+$font-family-title: "Hind", Helvetica, sans-serif;
+$font-family-body: "Nunito Sans", Arial, sans-serif;
 
 /* =======================
     FONT WEIGHT
@@ -59,8 +64,8 @@ $line-height-sm: 1.2;
 $line-height-link-timeline: $line-height-sm;
 $line-height-btn-landing: $line-height-sm;
 
-$letter-spacing-base: 0.18rem;
-$letter-spacing-base-md: 0.2rem;
+$letter-spacing-base: 0.12rem;
+$letter-spacing-base-md: 0.15rem;
 $letter-spacing-sm: 0.08rem; // for nav-links
 
 /* =======================

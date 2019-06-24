@@ -30,6 +30,7 @@
   .navbar-brand {
     font-weight: 600;
     font-size: 1.8rem;
+    font-family: $font-family-title;
     // margin-bottom: 8rem;
   }
 
@@ -56,6 +57,7 @@
     .nav-item {
       .nav-link {
         @include font-size($font-size-lg);
+        font-family: $font-family-title;
         font-weight: $font-weight-title;
         letter-spacing: $letter-spacing-sm;
         line-height: 1.5;

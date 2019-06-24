@@ -9,7 +9,7 @@
 ======================= */
 
 body {
-  // font-family: $font-family-lecken;
+  font-family: $font-family-body;
   font-weight: $font-weight-body;
   line-height: $line-height-base;
   letter-spacing: $letter-spacing-base;
@@ -26,6 +26,7 @@ h4,
 h5,
 h6 {
   font-weight: $font-weight-title;
+  // font-family: $font-family-title;
 }
 
 h1 {
