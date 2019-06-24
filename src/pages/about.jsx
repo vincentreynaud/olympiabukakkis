@@ -11,7 +11,7 @@ function About({ data }) {
   return (
     <>
       <SEO title="About" />
-      <Layout>
+      <Layout theme="theme-light">
         <Back />
         <section id="about" className="container container-sm">
           <h2>{about.frontmatter.name}</h2>

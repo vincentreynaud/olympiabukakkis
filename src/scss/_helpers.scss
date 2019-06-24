@@ -15,7 +15,8 @@
 }
 
 .muted {
-  color: rgba($dark, 0.8);
+  color: inherit;
+  // color: rgba($dark, 0.8);
 
   &:hover {
     color: inherit;

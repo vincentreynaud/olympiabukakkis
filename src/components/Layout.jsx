@@ -7,13 +7,13 @@ import Footer from "./Footer";
 
 import "../scss/Layout.scss";
 
-function Layout({ children }) {
+function Layout({ children, theme = "theme-dark" }) {
   return (
     <StaticQuery
       query={query}
       render={data => {
         return (
-          <div className="layout position-relative">
+          <div className={"layout position-relative " + theme}>
             <div className="row">
               <div className="col-nav col-xl-4">
                 <Navigation title={data.site.siteMetadata.title} />

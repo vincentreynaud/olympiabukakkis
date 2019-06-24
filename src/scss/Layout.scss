@@ -13,7 +13,6 @@ body {
   font-weight: $font-weight-body;
   line-height: $line-height-base;
   letter-spacing: $letter-spacing-base;
-  color: $dark;
 
   @include media-breakpoint-up(md) {
     letter-spacing: $letter-spacing-base-md;
@@ -45,27 +44,10 @@ p {
   @include font-size($font-size-body);
 }
 
+// reset
 a {
-  color: $link-color;
-
   &:hover {
-    color: $blue !important;
     text-decoration: none;
-  }
-
-  &.active {
-    color: $light;
-    background: $link-color;
-  }
-}
-
-// quick fix
-li {
-  &.active {
-    a {
-      color: $light;
-      background: $link-color;
-    }
   }
 }
 
@@ -103,6 +85,41 @@ li {
 
   @include media-breakpoint-up(xl) {
     padding-bottom: $main-pb-lg;
+  }
+}
+
+.theme-dark {
+  color: $light;
+  background-color: $black;
+
+  a {
+    color: $light;
+
+    &:hover {
+      color: $white !important;
+    }
+
+    &.active {
+      color: $white;
+    }
+  }
+}
+
+.theme-light {
+  color: $dark;
+  background-color: $light;
+
+  a {
+    color: $link-color;
+
+    &:hover {
+      color: $blue !important;
+    }
+
+    &.active {
+      color: $light;
+      background: $link-color;
+    }
   }
 }
 
