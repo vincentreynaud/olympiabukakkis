@@ -34,7 +34,7 @@
   }
 
   .navbar-toggler {
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     border: none;
     padding: 0.8rem 0.4rem 0.4rem 0.4rem;
     color: $navbar-toggler-color;
