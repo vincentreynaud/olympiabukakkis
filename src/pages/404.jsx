@@ -7,16 +7,11 @@ import SEO from "../components/SEO";
 function NotFound() {
   return (
     <>
-      <SEO title="404: Not found" />
+      <SEO title="Not found" />
       <Layout>
-        <div>
-          <div>NOT FOUND</div>
-          <div style={{ textAlign: "center" }}>
-            This page doesn&#39;t exist{" "}
-            <span role="img" aria-label="duh">
-              😓
-            </span>
-          </div>
+        <div className="container container-sm">
+          <h2>NOT FOUND</h2>
+          <div>This page doesn&#39;t exist </div>
           <Link to="/">
             <div>Go home</div>
           </Link>

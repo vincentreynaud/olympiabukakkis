@@ -13,15 +13,17 @@ function About({ data }) {
       <SEO title="About" />
       <Layout>
         <Back />
-        <h2>{about.frontmatter.name}</h2>
-        <div>
-          <Img fluid={aboutPicture.childImageSharp.fluid} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: about.html }} />
+        <section id="about" className="container container-sm">
+          <h2>{about.frontmatter.name}</h2>
+          <div>
+            <Img fluid={aboutPicture.childImageSharp.fluid} />
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: about.html }} />
 
-        <div>
-          <a href="mailto:your&#64;email.com">mail@olympiabukkakis.com</a>
-        </div>
+          <div>
+            <a href="mailto:your&#64;email.com">mail@olympiabukkakis.com</a>
+          </div>
+        </section>
       </Layout>
     </>
   );

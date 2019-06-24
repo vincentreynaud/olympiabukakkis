@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
-@import "helpers";
 @import "bootstrap-custom";
+@import "helpers";
 @import "../../node_modules/rfs/scss";
 
 /* =======================
@@ -135,11 +135,20 @@ li {
 }
 
 #work {
+  padding-top: 3rem;
   margin-bottom: 8rem;
 }
 
 .work {
   margin-bottom: 4rem;
+
+  .work-header {
+    margin-bottom: 2rem;
+  }
+
+  .work-text {
+    margin-bottom: 3rem;
+  }
 }
 
 #events {

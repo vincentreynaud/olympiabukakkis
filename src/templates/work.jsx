@@ -16,19 +16,21 @@ export default ({ data }) => {
       <SEO title={work.frontmatter.title} />
       <Layout>
         <Back />
-        <article className="work">
-          <h1>{work.frontmatter.title}</h1>
-          <h2>{work.frontmatter.date}</h2>
-          <div dangerouslySetInnerHTML={{ __html: work.html }} />
+        <article className="work container container-sm">
+          <div className="work-header">
+            <h1>{work.frontmatter.title}</h1>
+            <h3 className="muted font-weight-normal">{work.frontmatter.date}</h3>
+          </div>
+          <div className="work-text" dangerouslySetInnerHTML={{ __html: work.html }} />
 
           <div className="work-gallery">
             {workPictures.map(({ node }) => (
               <Image
                 key={node.id}
-                fixed={node.childImageSharp.fixed}
+                fluid={node.childImageSharp.fluid}
                 alt={`${work.frontmatter.title} picture`}
-                style={{}}
-                imgStyle={{}}
+                style={{ width: "100%", marginBottom: "1rem", display: "inline-block" }}
+                imgStyle={{ height: "auto" }}
               />
             ))}
           </div>
@@ -54,8 +56,8 @@ export const query = graphql`
           id
           base
           childImageSharp {
-            fixed(height: 500) {
-              ...GatsbyImageSharpFixed_noBase64
+            fluid(maxHeight: 785) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

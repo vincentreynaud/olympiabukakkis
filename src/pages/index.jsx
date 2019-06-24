@@ -82,7 +82,7 @@ class Index extends Component {
               </h1>
             </Link>
           </section>
-          <section id="work" className="container">
+          <section id="work" className="container container-sm">
             {works.edges.map(({ node }) => {
               const workRegex = new RegExp(node.frontmatter.id, "i");
               const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
