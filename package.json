@@ -29,6 +29,7 @@
     "react-helmet": "^5.2.0",
     "react-scrollspy": "^3.4.0",
     "reactstrap": "^8.0.0",
+    "rfs": "^8.0.4",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {

@@ -2,6 +2,7 @@
 @import "mixins";
 @import "helpers";
 @import "bootstrap-custom";
+@import "../../node_modules/rfs/scss";
 
 /* =======================
     GLOBAL
@@ -28,27 +29,27 @@ h6 {
   font-weight: $font-weight-title;
 }
 
-// h1 {
-//   @include font-size-responsive-high($font-size-h1);
-// }
+h1 {
+  @include font-size($font-size-h1);
+}
 
-// h2 {
-//   @include font-size-responsive-high($font-size-h2);
-// }
+h2 {
+  @include font-size($font-size-h2);
+}
 
-// h3 {
-//   @include font-size-responsive-low($font-size-md);
-// }
+h3 {
+  @include font-size($font-size-h3);
+}
 
-// p {
-//   @include font-size-responsive-base($font-size-body);
-// }
+p {
+  @include font-size($font-size-body);
+}
 
 a {
   color: $link-color;
 
   &:hover {
-    color: rgba($blue, 0.5);
+    color: $blue !important;
     text-decoration: none;
   }
 
@@ -98,16 +99,16 @@ li {
   padding-top: 2.5rem;
   padding-bottom: $main-pb;
   @include padding-screen-l();
+  @include padding-screen-r();
 
   @include media-breakpoint-up(xl) {
     padding-bottom: $main-pb-lg;
   }
 }
 
-// To restore the padding right missing from main
-.pr-main {
-  @include padding-screen-r();
-}
+/* =======================
+    SECTIONS
+======================= */
 
 #hero {
   height: 100vh;
@@ -116,8 +117,8 @@ li {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    font-size: 7.2rem;
     animation: opacity 2s ease-in-out;
+    @include font-size(7.2rem);
 
     &.scale-up {
       // transform: scale(1);
@@ -135,6 +136,10 @@ li {
 
 #work {
   margin-bottom: 8rem;
+}
+
+.work {
+  margin-bottom: 4rem;
 }
 
 #events {

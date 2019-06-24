@@ -42,15 +42,13 @@ $font-weight-title: $font-weight-semi-bold;
 
 $font-size-base: 1.2rem; // bigger for about??
 $font-size-md: 1.4rem;
-$font-size-lg: 1.8rem;
+$font-size-lg: 1.6rem;
 $font-size-xl: 2.2rem;
 
 $font-size-body: $font-size-base;
-$font-size-h2: 2rem;
+$font-size-h3: $font-size-md;
+$font-size-h2: $font-size-lg;
 $font-size-h1: $font-size-xl;
-
-$font-size-link-xxl: $font-size-h2;
-$font-size-link-timeline: $font-size-md;
 
 /* =======================
     SPACING

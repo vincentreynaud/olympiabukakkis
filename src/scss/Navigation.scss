@@ -29,19 +29,11 @@
   }
 
   .navbar-toggler {
+    @include font-size($font-size-xl);
     border: none;
     padding: 0.8rem 0.4rem 0.4rem 0.4rem;
-    font-size: $font-size-base;
     color: $navbar-toggler-color;
-
-    @include media-breakpoint-up(sm) {
-      font-size: $font-size-md;
     }
-
-    @include media-breakpoint-up(md) {
-      font-size: $font-size-lg;
-    }
-  }
 
   .nav-list {
     display: block;
@@ -58,27 +50,12 @@
 
     .nav-item {
       .nav-link {
-        font-size: $font-size-link-xxl;
+        @include font-size($font-size-lg);
         font-weight: $font-weight-title;
         letter-spacing: $letter-spacing-sm;
         line-height: 1.5;
         display: inline;
         padding: 0;
-
-        font-size: $font-size-lg - 0.4rem;
-
-        @include media-breakpoint-up(md) {
-          font-size: $font-size-lg - 0.2rem;
-        }
-        // not working
-        @include media-breakpoint-up(lg) {
-          font-size: $font-size-lg - 0.1rem;
-        }
-
-        // to include 15 inches devices
-        @media (min-width: 1441px) {
-          font-size: $font-size-lg;
-        }
       }
     }
   }
