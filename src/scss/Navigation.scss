@@ -9,7 +9,7 @@
   width: 100%;
   padding-top: $navbar-py;
   padding-bottom: $navbar-py;
-  background-color: $white;
+  background: linear-gradient(rgba($black, 0.8) 25%, rgba($black, 0.6) 50%, rgba($black, 0.4) 75%, transparent);
   @include padding-screen-x();
 
   @include media-breakpoint-up(md) {
@@ -23,8 +23,7 @@
     padding-top: $navbar-py-lg;
     padding-bottom: $navbar-py-lg;
     padding-right: 0; // to allow content bleed
-    // to reset setting for faded bg
-    background-color: transparent;
+    background: transparent;
   }
 
   .navbar-brand {
@@ -38,7 +37,7 @@
     @include font-size($font-size-lg);
     border: none;
     padding: 0.8rem 0.4rem 0.4rem 0.4rem;
-    color: $navbar-toggler-color;
+    color: $light;
   }
 
   .nav-list {
