@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import ToTop from "./ToTop";
 
 import "../scss/Layout.scss";
 import "../scss/Navigation.scss";
@@ -21,6 +22,7 @@ function Layout({ children, theme = "theme-dark" }) {
               </div>
               <div className="col-main col-xl-8">
                 <main className="main">{children}</main>
+                <ToTop />
               </div>
             </div>
             <div className="row">

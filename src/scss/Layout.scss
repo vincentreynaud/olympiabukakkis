@@ -188,15 +188,26 @@ a {
   height: 200vh;
 }
 
-.back {
-  position: fixed;
-  top: $base-layout-pt;
-  @include right($base-layout-px);
+.back,
+.to-top {
   z-index: 10;
-
-  background-color: transparent;
+  position: fixed;
+  @include right($base-layout-px);
+  height: $nav-arrow-size;
+  width: $nav-arrow-size;
+  background-color: $black;
   border: 0;
-  height: 3rem;
-  width: 3rem;
-  color: $white;
+}
+
+.back {
+  top: $base-layout-pt;
+}
+
+// pre-calculated values of cumputed footer height
+.to-top {
+  bottom: 5.25rem;
+
+  @media (min-width: 581px) {
+    bottom: 3.625rem;
+  }
 }

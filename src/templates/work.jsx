@@ -50,7 +50,7 @@ export const query = graphql`
       frontmatter {
         id
         title
-        date(formatString: "Do MMMM YYYY")
+        date(formatString: "MMMM YYYY")
         video
         photographer
       }
