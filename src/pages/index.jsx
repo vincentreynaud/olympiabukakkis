@@ -30,7 +30,7 @@ class Index extends Component {
   }
 
   scaleBrand = e => {
-    if (window.scrollY > this.state.hero.scrollHeight - 400) {
+    if (window.scrollY > this.state.hero.scrollHeight - 800) {
       this.scaleDown(this.state.heroBrand);
       // anime({
       //   targets: ".navbar-brand",
