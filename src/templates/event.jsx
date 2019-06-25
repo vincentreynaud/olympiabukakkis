@@ -31,7 +31,7 @@ export default ({ data }) => {
               <Image
                 key={node.id}
                 fluid={node.childImageSharp.fluid}
-                alt={`${event.frontmatter.title} picture`}
+                alt={event.frontmatter.title + " picture"}
                 style={{ width: "100%", marginBottom: "1rem", display: "inline-block" }}
                 imgStyle={{ height: "auto" }}
               />
@@ -52,8 +52,8 @@ export const query = graphql`
         date(formatString: "Do MMMM YYYY")
         time
         venue
-        link
         description
+        link
       }
     }
     pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {

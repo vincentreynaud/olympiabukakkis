@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 import Layout from "../components/Layout";
 import Back from "../components/Back";
 import SEO from "../components/SEO";
 
 function Events({ data }) {
-  const { events } = data;
+  const { events, pictures } = data;
 
   return (
     <>
@@ -14,14 +15,27 @@ function Events({ data }) {
       <Layout>
         <Back />
         <section id="events" className="container container-sm">
-          {events.edges.map(({ node }) => (
-            <Link to={node.fields.slug} key={node.id}>
-              <h1>{node.frontmatter.title}</h1>
-              <p>
-                <small>{node.frontmatter.date}</small>
-              </p>
-            </Link>
-          ))}
+          {events.edges.map(({ node }) => {
+            const eventRegex = new RegExp(node.frontmatter.id, "i");
+            const [picture] = pictures.edges.filter(({ node }) => node.base.match(eventRegex));
+
+            return (
+              <Link to={node.fields.slug} key={node.id}>
+                <Image
+                  fluid={picture.node.childImageSharp.fluid}
+                  alt={node.frontmatter.title + " event poster"}
+                  style={{ width: "100%", height: "50vmin", marginBottom: "0.75rem" }}
+                  imgStyle={{}}
+                />
+                <h1>{node.frontmatter.title}</h1>
+                <p>
+                  <small>
+                    {node.frontmatter.date} &bull; {node.frontmatter.venue}
+                  </small>
+                </p>
+              </Link>
+            );
+          })}
         </section>
       </Layout>
     </>
@@ -47,6 +61,19 @@ export const query = graphql`
           }
           fields {
             slug
+          }
+        }
+      }
+    }
+    pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            fluid(maxHeight: 500) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
           }
         }
       }

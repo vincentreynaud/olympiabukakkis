@@ -92,8 +92,8 @@ class Index extends Component {
                   <Link to={node.fields.slug} key={node.id}>
                     {typeof picture !== "undefined" && (
                       <Image
-                        fixed={picture.node.childImageSharp.fixed}
-                        alt={`${node.frontmatter.title} picture`}
+                        fluid={picture.node.childImageSharp.fluid}
+                        alt={node.frontmatter.title + " picture"}
                         style={{ width: "100%", height: "50vmin", marginBottom: "0.75rem" }}
                         imgStyle={{}}
                       />
@@ -141,8 +141,8 @@ export const query = graphql`
           id
           base
           childImageSharp {
-            fixed(height: 500) {
-              ...GatsbyImageSharpFixed_noBase64
+            fluid(maxHeight: 990) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

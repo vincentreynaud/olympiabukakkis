@@ -28,13 +28,13 @@ export default ({ data }) => {
               <Image
                 key={node.id}
                 fluid={node.childImageSharp.fluid}
-                alt={`${work.frontmatter.title} picture`}
+                alt={work.frontmatter.title + " picture"}
                 style={{ width: "100%", marginBottom: "1rem", display: "inline-block" }}
                 imgStyle={{ height: "auto" }}
               />
             ))}
           </div>
-          <div className="credits">
+          <div className="work-credits">
             <small>Photography: {work.frontmatter.photographer}</small>
           </div>
         </article>
