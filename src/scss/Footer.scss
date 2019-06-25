@@ -6,25 +6,14 @@
   background: transparent;
   position: fixed;
   bottom: 0;
-  height: $footer-height-mobile;
   padding-top: $footer-py;
   padding-bottom: $footer-py;
   @include px(3rem);
+  @include footer-height($font-size-body, $line-height-base, $footer-py);
+  // .footer-hide definition in mixin
   transition: bottom 0.1s ease-in;
-
-  @media (min-width: 581px) {
-    height: $footer-height;
-  }
 
   &.footer-show {
     bottom: 0;
-  }
-
-  &.footer-hide {
-    bottom: calc(#{$footer-height-mobile} * -1);
-
-    @media (min-width: 581px) {
-      bottom: calc(#{$footer-height} * -1);
-    }
   }
 }

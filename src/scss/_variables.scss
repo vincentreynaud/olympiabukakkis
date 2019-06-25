@@ -112,7 +112,3 @@ $logo-height-xxl: 4.9rem;
 $logo-mb: 2rem;
 
 $footer-py: 1rem;
-$footer-text-height: calc(#{$font-size-body} * #{$line-height-base});
-$footer-padding-height: calc(#{$footer-py} * 2);
-$footer-height: calc(#{$footer-text-height} + #{$footer-padding-height});
-$footer-height-mobile: calc(calc(#{$footer-text-height} * 2) + #{$footer-padding-height});

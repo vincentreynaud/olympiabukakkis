@@ -167,3 +167,23 @@
     right: $base;
   }
 }
+
+@mixin footer-height($font-size: 1rem, $line-height: 1, $py: 1rem) {
+  $footer-text-height: calc(0.9 * #{$font-size} * #{$line-height});
+  $footer-height: calc(calc(#{$footer-text-height} * 2) + calc(#{$py} * 2));
+  $footer-height-md: calc(#{$footer-text-height} + calc(#{$py} * 2));
+
+  height: $footer-height;
+
+  &.footer-hide {
+    bottom: calc(#{$footer-height} * -1);
+  }
+
+  @media (min-width: 581px) {
+    height: $footer-height-md;
+
+    &.footer-hide {
+      bottom: calc(#{$footer-height-md} * -1);
+    }
+  }
+}
