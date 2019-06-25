@@ -7,29 +7,22 @@
   z-index: 1010;
   position: fixed !important;
   width: 100%;
-  padding-top: $navbar-py;
-  padding-bottom: $navbar-py;
   background: linear-gradient(rgba($black, 0.8) 25%, rgba($black, 0.6) 50%, rgba($black, 0.4) 75%, transparent);
-  @include padding-screen-x();
-
-  @include media-breakpoint-up(md) {
-    padding-top: $navbar-py-md;
-    padding-bottom: $navbar-py-md;
-  }
+  @include py(2.5rem);
+  @include px($base-layout-px);
 
   @include media-breakpoint-up(xl) {
     display: block;
     width: auto;
-    padding-top: $navbar-py-lg;
-    padding-bottom: $navbar-py-lg;
+    height: 100%;
     padding-right: 0; // to allow content bleed
     background: transparent;
   }
 
   .navbar-brand {
-    font-weight: 600;
-    font-size: 1.8rem;
     font-family: $font-family-title;
+    @include font-size($font-size-lg);
+    font-weight: 600;
     // margin-bottom: 8rem;
   }
 

@@ -9,7 +9,7 @@
   height: $footer-height-mobile;
   padding-top: $footer-py;
   padding-bottom: $footer-py;
-  @include padding-screen-x();
+  @include px(3rem);
   transition: bottom 0.1s ease-in;
 
   @media (min-width: 581px) {

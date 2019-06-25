@@ -98,6 +98,11 @@ $border-width: 2px;
 $col-nav-max-width-xl: 380px;
 $col-nav-max-width-xxl: 420px;
 
+$base-layout-px: 3rem;
+$base-layout-pt: 2.5rem;
+$main-pb: 4rem;
+$main-pb-xl: 5rem;
+
 $logo-height: 2.6rem;
 $logo-height-sm: 3.15rem;
 $logo-height-md: 3.8rem;
@@ -105,16 +110,6 @@ $logo-height-lg: 4rem;
 $logo-height-xl: 4.6rem;
 $logo-height-xxl: 4.9rem;
 $logo-mb: 2rem;
-
-$navbar-py: 1.2rem;
-$navbar-py-md: 1.3rem;
-$navbar-py-lg: 2.5rem;
-
-$main-pb: 4rem; // resolve padding bottom
-$main-pl: 2rem;
-$main-pr: 0;
-$main-pb-lg: 5rem; // resolve padding bottom
-$main-pl-lg: 3rem;
 
 $footer-py: 1rem;
 $footer-text-height: calc(#{$font-size-body} * #{$line-height-base});

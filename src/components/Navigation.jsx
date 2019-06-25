@@ -4,7 +4,6 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reac
 import Scrollspy from "react-scrollspy";
 
 import { capitalise } from "../helpers/es6";
-import "../scss/Navigation.scss";
 
 class Navigation extends Component {
   constructor(props) {

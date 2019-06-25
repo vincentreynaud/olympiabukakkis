@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 import "../scss/Layout.scss";
+import "../scss/Navigation.scss";
 
 function Layout({ children, theme = "theme-dark" }) {
   return (
@@ -13,7 +14,7 @@ function Layout({ children, theme = "theme-dark" }) {
       query={query}
       render={data => {
         return (
-          <div className={"layout position-relative " + theme}>
+          <div className={"layout " + theme}>
             <div className="row">
               <div className="col-nav col-xl-4">
                 <Navigation title={data.site.siteMetadata.title} />
