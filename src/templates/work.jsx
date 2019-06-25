@@ -34,6 +34,9 @@ export default ({ data }) => {
               />
             ))}
           </div>
+          <div className="credits">
+            <small>Photography: {work.frontmatter.photographer}</small>
+          </div>
         </article>
       </Layout>
     </>
@@ -48,6 +51,8 @@ export const query = graphql`
         id
         title
         date(formatString: "Do MMMM YYYY")
+        video
+        photographer
       }
     }
     pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {

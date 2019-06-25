@@ -88,7 +88,7 @@ class Index extends Component {
               const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
 
               return (
-                <div className="work">
+                <div className="work" key={node.id}>
                   <Link to={node.fields.slug} key={node.id}>
                     {typeof picture !== "undefined" && (
                       <Image
