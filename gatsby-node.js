@@ -23,15 +23,34 @@ exports.createPages = ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              type
+            }
           }
         }
       }
     }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (result.errors) throw result.errors;
+
+    const { edges } = result.data.allMarkdownRemark;
+    const work = edges.filter(({ node }) => node.frontmatter.type.trim() === "work");
+    const event = edges.filter(({ node }) => node.frontmatter.type.trim() === "event");
+
+    work.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve("./src/templates/work.jsx"),
+        context: {
+          slug: node.fields.slug
+        }
+      });
+    });
+
+    event.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/event.jsx"),
         context: {
           slug: node.fields.slug
         }
