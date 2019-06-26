@@ -61,6 +61,7 @@ a {
 ======================= */
 
 .layout {
+  z-index: 1;
   position: relative;
 
   .col-nav {
@@ -146,17 +147,19 @@ a {
 ======================= */
 
 #hero {
+  z-index: 2;
   height: 100vh;
 
   #hero-brand {
-    font-family: $font-family-title;
+    z-index: 3;
     position: fixed;
     top: 50%;
     left: 50%;
+    @include font-size(7.2rem);
+    font-family: $font-family-title;
     transform: translate(-50%, -70%);
     transition: opacity 0.15s ease-out;
     opacity: 1;
-    @include font-size(7.2rem);
 
     &.scale-up {
       // transform: scale(1);
@@ -172,11 +175,6 @@ a {
   }
 }
 
-#work {
-  padding-top: 3rem;
-  margin-bottom: 8rem;
-}
-
 .work {
   margin-bottom: 4rem;
 
@@ -186,6 +184,25 @@ a {
 
   .work-text {
     margin-bottom: 3rem;
+  }
+}
+
+#work {
+  padding-top: 3rem;
+  margin-bottom: 8rem;
+
+  // on index page
+  .work {
+    min-height: 100vh;
+
+    &:last-child() {
+      min-height: auto;
+      margin-bottom: 8rem;
+    }
+
+    .work-description {
+      white-space: pre-line;
+    }
   }
 }
 

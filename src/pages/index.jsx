@@ -89,21 +89,23 @@ class Index extends Component {
 
               return (
                 <div className="work" key={node.id}>
-                  <Link to={node.fields.slug} key={node.id}>
+                  <Link to={node.fields.slug}>
                     {typeof picture !== "undefined" && (
                       <Image
                         fluid={picture.node.childImageSharp.fluid}
                         alt={node.frontmatter.title + " picture"}
-                        style={{ width: "100%", height: "50vmin", marginBottom: "0.75rem" }}
+                        style={{ width: "100%", height: "50vmin", marginBottom: "1rem" }}
                         imgStyle={{}}
                       />
                     )}
-                    <h2>
-                      {node.frontmatter.title} <small className="muted">&mdash; {node.frontmatter.date}</small>
+                  </Link>
+                  <Link to={node.fields.slug}>
+                    <h2 className="work-title">
+                      {node.frontmatter.title} <small className="work-date">&mdash; {node.frontmatter.date}</small>
                     </h2>
                   </Link>
 
-                  <p>{node.frontmatter.description}</p>
+                  <p className="work-description">{node.frontmatter.description}</p>
                 </div>
               );
             })}
