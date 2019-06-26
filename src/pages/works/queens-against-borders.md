@@ -1,7 +1,7 @@
 ---
 type: "work"
 title: "Queens Against Borders"
-id: "qab"
+id: "queens"
 date: "2015-09-26"
 description: "A performance party in solidarity with trans and queer refugees" 
 video: ""

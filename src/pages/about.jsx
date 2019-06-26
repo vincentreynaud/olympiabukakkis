@@ -46,7 +46,7 @@ export const query = graphql`
         name
       }
     }
-    aboutPicture: file(relativePath: { eq: "RandomPhoto.jpg" }) {
+    aboutPicture: file(base: { eq: "about.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_noBase64
