@@ -10,9 +10,7 @@ description: "A performance party building solidarity with trans and queer refug
 link: "https://www.facebook.com/events/2179621655494107/"
 ---
 
-
 QUEENS AGAINST BORDERS is returning to SO36 for our 10th edition! We've been putting on these shows for 4 years now and this one will be our biggest and best yet!  
-
 
 With performances by:   
 
