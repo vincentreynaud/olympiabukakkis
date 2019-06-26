@@ -26,8 +26,9 @@ export default ({ data }) => {
               {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
             </h3>
           </div>
-          <p className="event-text">{event.frontmatter.description}</p>
           <a href={event.frontmatter.link}>View on Facebook</a>
+          <p className="event-description">{event.frontmatter.description}</p>
+          <div className="event-text mb-5" dangerouslySetInnerHTML={{ __html: event.html }} />
           <div className="event-gallery">
             {eventPictures.map(({ node }) => (
               <Image
@@ -39,6 +40,11 @@ export default ({ data }) => {
               />
             ))}
           </div>
+          {event.frontmatter.artwork && (
+            <div className="event-credits">
+              <small>Artwork: {event.frontmatter.artwork}</small>
+            </div>
+          )}
         </article>
       </Layout>
     </>
@@ -48,6 +54,7 @@ export default ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     event: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       frontmatter {
         id
         title
@@ -56,6 +63,7 @@ export const query = graphql`
         venue
         description
         link
+        artwork
       }
     }
     pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {

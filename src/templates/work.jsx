@@ -34,9 +34,11 @@ export default ({ data }) => {
               />
             ))}
           </div>
-          <div className="work-credits">
-            <small>Photography: {work.frontmatter.photographer}</small>
-          </div>
+          {work.frontmatter.photographer && (
+            <div className="work-credits">
+              <small>Photography: {work.frontmatter.photographer}</small>
+            </div>
+          )}
         </article>
       </Layout>
     </>
