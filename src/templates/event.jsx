@@ -9,7 +9,10 @@ import SEO from "../components/SEO";
 export default ({ data }) => {
   const { event, pictures } = data;
   const eventRegex = new RegExp(event.frontmatter.id, "i");
-  const eventPictures = pictures.edges.filter(({ node }) => node.base.match(eventRegex));
+  const coverRegex = new RegExp("cover", "i");
+  const eventPictures = pictures.edges.filter(
+    ({ node }) => node.base.match(eventRegex) && !node.base.match(coverRegex)
+  );
 
   return (
     <>
@@ -19,12 +22,11 @@ export default ({ data }) => {
         <article className="event container container-sm">
           <div className="event-header">
             <h1>{event.frontmatter.title}</h1>
-            <h3>{event.frontmatter.venue}</h3>
             <h3 className="muted font-weight-normal">
-              {event.frontmatter.date} &middot; {event.frontmatter.time}
+              {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
             </h3>
           </div>
-          <div className="event-text">{event.frontmatter.description}</div>
+          <p className="event-text">{event.frontmatter.description}</p>
           <a href={event.frontmatter.link}>View on Facebook</a>
           <div className="event-gallery">
             {eventPictures.map(({ node }) => (
@@ -49,7 +51,7 @@ export const query = graphql`
       frontmatter {
         id
         title
-        date(formatString: "Do MMMM YYYY")
+        date(formatString: "DD MMM")
         time
         venue
         description

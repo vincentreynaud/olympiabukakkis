@@ -18,22 +18,27 @@ function Events({ data }) {
           {events.edges.map(({ node }) => {
             const eventRegex = new RegExp(node.frontmatter.id, "i");
             const [picture] = pictures.edges.filter(({ node }) => node.base.match(eventRegex));
-
+            // try-out
+            const dateArr = node.frontmatter.date.split(" ");
+            const day = dateArr[0];
+            const month = dateArr[1].toUpperCase();
             return (
-              <Link to={node.fields.slug} key={node.id}>
-                <Image
-                  fluid={picture.node.childImageSharp.fluid}
-                  alt={node.frontmatter.title + " event poster"}
-                  style={{ width: "100%", height: "50vmin", marginBottom: "0.75rem" }}
-                  imgStyle={{}}
-                />
-                <h1>{node.frontmatter.title}</h1>
+              <article className="event" key={node.id}>
+                <Link to={node.fields.slug}>
+                  <Image
+                    fluid={picture.node.childImageSharp.fluid}
+                    alt={node.frontmatter.title + " event poster"}
+                    style={{ width: "100%", height: "33vmin", marginBottom: "0.75rem" }}
+                    imgStyle={{}}
+                  />
+                </Link>
+                <Link to={node.fields.slug}>
+                  <h1 className="event-title">{node.frontmatter.title}</h1>
+                </Link>
                 <p>
-                  <small>
-                    {node.frontmatter.date} &bull; {node.frontmatter.venue}
-                  </small>
+                  {node.frontmatter.date} &middot; {node.frontmatter.time} &middot; {node.frontmatter.venue}
                 </p>
-              </Link>
+              </article>
             );
           })}
         </section>
@@ -54,7 +59,8 @@ export const query = graphql`
           frontmatter {
             id
             title
-            date(formatString: "DD MMMM YYYY")
+            date(formatString: "DD MMM")
+            time
             venue
             description
             link
@@ -65,7 +71,10 @@ export const query = graphql`
         }
       }
     }
-    pictures: allFile(filter: { sourceInstanceName: { eq: "images" } }, sort: { fields: [name], order: ASC }) {
+    pictures: allFile(
+      filter: { sourceInstanceName: { eq: "images" }, base: { regex: "/cover/" } }
+      sort: { fields: [name], order: ASC }
+    ) {
       edges {
         node {
           id
