@@ -8,6 +8,10 @@
     GLOBAL
 ======================= */
 
+html {
+  // scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-family-body;
   font-weight: $font-weight-body;
@@ -110,6 +114,7 @@ a {
 
   button {
     fill: $white;
+    background-color: $black;
   }
 }
 
@@ -132,6 +137,7 @@ a {
 
   button {
     fill: $dark;
+    background-color: $light;
   }
 }
 
@@ -195,7 +201,6 @@ a {
   @include right($base-layout-px);
   height: $nav-arrow-size;
   width: $nav-arrow-size;
-  background-color: $black;
   border: 0;
 }
 
