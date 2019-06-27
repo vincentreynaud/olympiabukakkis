@@ -229,21 +229,34 @@ a {
 .to-top {
   z-index: 10;
   position: fixed;
-  @include right($base-layout-px);
   height: $nav-arrow-size;
   width: $nav-arrow-size;
   border: 0;
 }
 
-.back {
+.top {
   top: $base-layout-pt;
 }
 
+.middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // pre-calculated values of cumputed footer height
-.to-top {
+.bottom {
   bottom: 5.25rem;
 
   @media (min-width: 581px) {
     bottom: 3.625rem;
   }
+}
+
+.left {
+  @include left($base-layout-px);
+}
+
+.right {
+  @include right($base-layout-px);
 }
