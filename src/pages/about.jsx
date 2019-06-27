@@ -10,7 +10,7 @@ function About({ data }) {
   const { about, aboutPicture } = data;
   return (
     <>
-      <SEO title="About" />
+      <SEO />
       <Layout theme="theme-light">
         <Back />
         <section id="about" className="container container-sm">

@@ -25,8 +25,7 @@ function SEO({ lang, title, description }) {
       htmlAttributes={{
         lang
       }}
-      title={title}
-      titleTemplate={`%s ― ${site.siteMetadata.title}`}
+      title={title ? `${title} ― ${site.siteMetadata.title}` : site.siteMetadata.title}
       meta={[
         {
           name: "description",
@@ -68,7 +67,7 @@ function SEO({ lang, title, description }) {
 SEO.defaultProps = {
   lang: "en",
   meta: [],
-  description: ""
+  description: "Olympia Bukkakis' performer portfolio website"
 };
 
 SEO.propTypes = {
