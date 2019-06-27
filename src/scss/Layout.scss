@@ -242,12 +242,6 @@ a {
   top: $base-layout-pt;
 }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 // pre-calculated values of cumputed footer height
 .bottom {
   bottom: 5.25rem;

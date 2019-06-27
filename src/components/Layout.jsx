@@ -28,7 +28,7 @@ class Layout extends Component {
   }
 
   render() {
-    const { children, theme = "theme-dark", hideNav } = this.props;
+    const { children, theme = "theme-dark", hideNav, scaleUp } = this.props;
 
     return (
       <StaticQuery
@@ -38,7 +38,12 @@ class Layout extends Component {
             <div className={"layout " + theme}>
               <div className="row">
                 <div className="col-nav col-xl-4">
-                  <Navigation title={data.site.siteMetadata.title} handleScroll={this.handleScroll} hideNav={hideNav} />
+                  <Navigation
+                    title={data.site.siteMetadata.title}
+                    handleScroll={this.handleScroll}
+                    hideNav={hideNav}
+                    scaleUp={scaleUp}
+                  />
                 </div>
                 <div className="col-main col-xl-8">
                   <main className="main">{children}</main>

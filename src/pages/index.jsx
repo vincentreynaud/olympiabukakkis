@@ -23,7 +23,6 @@ class Index extends Component {
     this.setState({
       hero: document.getElementById("hero"),
       navBrand: document.querySelector(".navbar-brand"),
-      heroBrand: document.getElementById("hero-brand"),
       navLinks: document.querySelectorAll(".nav-link")
     });
   }
@@ -36,11 +35,9 @@ class Index extends Component {
     }
 
     if (window.scrollY > this.state.hero.scrollHeight - 800) {
-      this.scaleDown(this.state.heroBrand);
-      this.show(this.state.navBrand);
+      this.scaleDown(this.state.navBrand);
     } else {
-      this.scaleUp(this.state.heroBrand);
-      this.hide(this.state.navBrand);
+      this.scaleUp(this.state.navBrand);
     }
   };
 
@@ -58,6 +55,7 @@ class Index extends Component {
     }
   };
 
+  // now useless..
   hide = el => {
     if (el.classList.contains("show") || !el.classList.contains("hide")) {
       el.classList.remove("show");
@@ -78,14 +76,8 @@ class Index extends Component {
     return (
       <>
         <SEO />
-        <Layout hideNav={true} handleScroll={this.handleScroll} show={this.show}>
-          <section id="hero">
-            <Link to="/about">
-              <h1 id="hero-brand" className="text-nowrap">
-                Olympia Bukkakis
-              </h1>
-            </Link>
-          </section>
+        <Layout handleScroll={this.handleScroll} hideNav={true} scaleUp={true}>
+          <section id="hero" />
           <section id="work" className="container container-sm">
             {work.edges.map(({ node }) => {
               const workRegex = new RegExp(node.frontmatter.id, "i");

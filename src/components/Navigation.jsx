@@ -24,12 +24,12 @@ class Navigation extends Component {
   };
 
   render() {
-    const { title, hideNav = false } = this.props;
+    const { title, hideNav = false, scaleUp } = this.props;
 
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
         <div className="d-flex justify-content-between align-items-center w-100">
-          <NavbarBrand className={classNames({ middle: true, hide: hideNav })} href="/about">
+          <NavbarBrand style={scaleUp && { fontSize: "7.2rem" }} href="/about">
             {title}
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
