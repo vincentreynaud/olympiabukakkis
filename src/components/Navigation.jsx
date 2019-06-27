@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
 import Scrollspy from "react-scrollspy";
-
 import classNames from "classnames";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
 
 class Navigation extends Component {
   constructor(props) {
