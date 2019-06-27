@@ -13,23 +13,34 @@ class Index extends Component {
     this.state = {
       hero: null,
       heroBrand: null,
-      navBrand: null
+      navBrand: null,
+      navLinks: null
     };
   }
 
+  // not sure if getting the navBrand here is a good idea...
   componentDidMount() {
     this.setState({
       hero: document.getElementById("hero"),
       navBrand: document.querySelector(".navbar-brand"),
-      heroBrand: document.getElementById("hero-brand")
+      heroBrand: document.getElementById("hero-brand"),
+      navLinks: document.querySelectorAll(".nav-link")
     });
   }
 
   handleScroll = () => {
+    if (window.scrollY > 1) {
+      this.state.navLinks.forEach(el => this.show(el));
+    } else {
+      this.state.navLinks.forEach(el => this.hide(el));
+    }
+
     if (window.scrollY > this.state.hero.scrollHeight - 800) {
       this.scaleDown(this.state.heroBrand);
+      this.show(this.state.navBrand);
     } else {
       this.scaleUp(this.state.heroBrand);
+      this.hide(this.state.navBrand);
     }
   };
 
@@ -47,13 +58,27 @@ class Index extends Component {
     }
   };
 
+  hide = el => {
+    if (el.classList.contains("show") || !el.classList.contains("hide")) {
+      el.classList.remove("show");
+      el.classList.add("hide");
+    }
+  };
+
+  show = el => {
+    if (el.classList.contains("hide")) {
+      el.classList.remove("hide");
+      el.classList.add("show");
+    }
+  };
+
   render() {
     const { work, pictures } = this.props.data;
 
     return (
       <>
         <SEO />
-        <Layout handleScroll={this.handleScroll}>
+        <Layout hideNav={true} handleScroll={this.handleScroll} show={this.show}>
           <section id="hero">
             <Link to="/about">
               <h1 id="hero-brand" className="text-nowrap">

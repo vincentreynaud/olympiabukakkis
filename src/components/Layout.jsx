@@ -14,10 +14,12 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      scrollY: 0
+      scrollY: 0,
+      navLinks: null
     };
   }
 
+  // again not sure we should get links in this component
   componentDidMount() {
     window.onscroll = () => {
       this.setState({ scrollY: window.scrollY });
@@ -26,7 +28,7 @@ class Layout extends Component {
   }
 
   render() {
-    const { children, theme = "theme-dark" } = this.props;
+    const { children, theme = "theme-dark", hideNav } = this.props;
 
     return (
       <StaticQuery
@@ -36,7 +38,7 @@ class Layout extends Component {
             <div className={"layout " + theme}>
               <div className="row">
                 <div className="col-nav col-xl-4">
-                  <Navigation title={data.site.siteMetadata.title} />
+                  <Navigation title={data.site.siteMetadata.title} handleScroll={this.handleScroll} hideNav={hideNav} />
                 </div>
                 <div className="col-main col-xl-8">
                   <main className="main">{children}</main>

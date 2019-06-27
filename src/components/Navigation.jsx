@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
 import Scrollspy from "react-scrollspy";
 
-import { capitalise } from "../helpers/es6";
+import classNames from "classnames";
 
 class Navigation extends Component {
   constructor(props) {
@@ -25,12 +25,14 @@ class Navigation extends Component {
   };
 
   render() {
-    const { title } = this.props;
+    const { title, hideNav = false } = this.props;
 
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
         <div className="d-flex justify-content-between align-items-center w-100">
-          <NavbarBrand href="/about">{title}</NavbarBrand>
+          <NavbarBrand className={classNames({ middle: true, hide: hideNav })} href="/about">
+            {title}
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
@@ -41,12 +43,20 @@ class Navigation extends Component {
             offset={800}
           >
             <NavItem>
-              <Link className="nav-link" to="#work" activeClassName="active">
+              <Link
+                className={classNames({ "nav-link": true, bottom: true, hide: hideNav })}
+                to="#work"
+                activeClassName="active"
+              >
                 Work
               </Link>
             </NavItem>
             <NavItem>
-              <Link className="nav-link" to="/events" activeClassName="active">
+              <Link
+                className={classNames({ "nav-link": true, top: true, hide: hideNav })}
+                to="/events"
+                activeClassName="active"
+              >
                 Events
               </Link>
             </NavItem>
