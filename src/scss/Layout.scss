@@ -264,3 +264,19 @@ a {
 .right {
   @include right($base-layout-px);
 }
+
+#about {
+  position: relative;
+
+  .col-pic {
+    @include media-breakpoint-up(xl) {
+      max-width: 300px;
+    }
+  }
+
+  .col-text {
+    @include media-breakpoint-up(xl) {
+      min-width: calc(100% - 300px);
+    }
+  }
+}

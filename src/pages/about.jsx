@@ -14,20 +14,28 @@ function About({ data }) {
       <Layout theme="theme-light">
         <Back />
         <section id="about" className="container container-sm">
-          <h2>{about.frontmatter.name}</h2>
-          <div>
-            <Img fluid={aboutPicture.childImageSharp.fluid} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: about.html }} />
-
-          <div>
-            <a href="mailto:mail&#64;olympiabukkakis.com">
-              <span>mail</span>
-              <span>&#64;</span>
-              <span>olympia</span>
-              <span>bukkakkis</span>
-              <span>.com</span>
-            </a>
+          <div className="row">
+            <div className="col-pic col-6">
+              <Img
+                fluid={aboutPicture.childImageSharp.fluid}
+                alt="Olympia Bukkakis' portrait"
+                className=""
+                style={{ marginRight: "2rem", maxWidth: "300px" }}
+              />
+            </div>
+            <div className="col-text col-6">
+              <h3>
+                Contact:{" "}
+                <a href="mailto:mail&#64;olympiabukkakis.com">
+                  <span>mail</span>
+                  <span>&#64;</span>
+                  <span>olympia</span>
+                  <span>bukkakkis</span>
+                  <span>.com</span>
+                </a>
+              </h3>
+              <div className="" dangerouslySetInnerHTML={{ __html: about.html }} />
+            </div>
           </div>
         </section>
       </Layout>
@@ -48,7 +56,7 @@ export const query = graphql`
     }
     aboutPicture: file(base: { eq: "about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
