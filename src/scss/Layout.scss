@@ -269,14 +269,19 @@ a {
   position: relative;
 
   .col-pic {
-    @include media-breakpoint-up(xl) {
-      max-width: 300px;
+    max-width: 350px;
+
+    .portrait {
+      margin-right: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
   .col-text {
-    @include media-breakpoint-up(xl) {
-      min-width: calc(100% - 300px);
-    }
+    min-width: calc(100% - 350px);
+  }
+
+  .contact {
+    margin-bottom: 1.5rem;
   }
 }

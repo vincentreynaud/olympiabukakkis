@@ -15,25 +15,20 @@ function About({ data }) {
         <Back />
         <section id="about" className="container container-sm">
           <div className="row">
-            <div className="col-pic col-6">
-              <Img
-                fluid={aboutPicture.childImageSharp.fluid}
-                alt="Olympia Bukkakis' portrait"
-                className=""
-                style={{ marginRight: "2rem", maxWidth: "300px" }}
-              />
+            <div className="col-pic col-md-6">
+              <Img fluid={aboutPicture.childImageSharp.fluid} alt="Olympia Bukkakis' portrait" className="portrait" />
             </div>
-            <div className="col-text col-6">
-              <h3>
-                Contact:{" "}
-                <a href="mailto:mail&#64;olympiabukkakis.com">
+            <div className="col-text col-md-6">
+              <h2 className="contact">
+                Contact <br />
+                <a className="text-nowrap" href="mailto:mail&#64;olympiabukkakis.com">
                   <span>mail</span>
                   <span>&#64;</span>
                   <span>olympia</span>
                   <span>bukkakkis</span>
                   <span>.com</span>
                 </a>
-              </h3>
+              </h2>
               <div className="" dangerouslySetInnerHTML={{ __html: about.html }} />
             </div>
           </div>
@@ -56,7 +51,7 @@ export const query = graphql`
     }
     aboutPicture: file(base: { eq: "about.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 305) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
