@@ -164,12 +164,14 @@ a {
     &.scale-up {
       // transform: scale(1);
       // transform-origin: left;
+      display: block;
       opacity: 1;
     }
 
     &.scale-down {
       // transform: scale(0.25);
       // transform-origin: left;
+      display: none;
       opacity: 0;
     }
   }
