@@ -23,40 +23,13 @@ class Index extends Component {
       navBrand: document.querySelector(".navbar-brand"),
       heroBrand: document.getElementById("hero-brand")
     });
-
-    window.onscroll = e => {
-      this.scaleBrand(e);
-    };
   }
 
-  scaleBrand = e => {
+  handleScroll = () => {
     if (window.scrollY > this.state.hero.scrollHeight - 800) {
       this.scaleDown(this.state.heroBrand);
-      // anime({
-      //   targets: ".navbar-brand",
-      //   scale: {
-      //     value: 0.25,
-      //     duration: 200,
-      //     easing: "easeOutQuart"
-      //   }
-      // });
     } else {
       this.scaleUp(this.state.heroBrand);
-      // anime({
-      //   targets: ".navbar-brand",
-      //   scale: {
-      //     value: 1,
-      //     duration: 200,
-      //     easing: "easeOutQuart"
-      //   }
-      // });
-    }
-  };
-
-  scaleUp = el => {
-    if (el.classList.contains("scale-down")) {
-      el.classList.remove("scale-down");
-      el.classList.add("scale-up");
     }
   };
 
@@ -67,14 +40,20 @@ class Index extends Component {
     }
   };
 
+  scaleUp = el => {
+    if (el.classList.contains("scale-down")) {
+      el.classList.remove("scale-down");
+      el.classList.add("scale-up");
+    }
+  };
+
   render() {
-    const { works, pictures } = this.props.data;
-    // const workPictures = pictures.edges.filter(({ node }) => node.frontmatter.type === "work");
+    const { work, pictures } = this.props.data;
 
     return (
       <>
         <SEO />
-        <Layout>
+        <Layout handleScroll={this.handleScroll}>
           <section id="hero">
             <Link to="/about">
               <h1 id="hero-brand" className="text-nowrap">
@@ -83,7 +62,7 @@ class Index extends Component {
             </Link>
           </section>
           <section id="work" className="container container-sm">
-            {works.edges.map(({ node }) => {
+            {work.edges.map(({ node }) => {
               const workRegex = new RegExp(node.frontmatter.id, "i");
               const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
 
@@ -118,7 +97,7 @@ class Index extends Component {
 
 export const query = graphql`
   query {
-    works: allMarkdownRemark(
+    work: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "work" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -154,3 +133,23 @@ export const query = graphql`
 `;
 
 export default Index;
+
+// this.scaleDown();
+// anime({
+//   targets: ".navbar-brand",
+//   scale: {
+//     value: 0.25,
+//     duration: 200,
+//     easing: "easeOutQuart"
+//   }
+// });
+
+// this.scaleUp(this.state.heroBrand);
+// anime({
+//   targets: ".navbar-brand",
+//   scale: {
+//     value: 1,
+//     duration: 200,
+//     easing: "easeOutQuart"
+//   }
+// });
