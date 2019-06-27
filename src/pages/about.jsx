@@ -17,10 +17,9 @@ function About({ data }) {
           <div className="row">
             <div className="col-pic col-md-6">
               <Img fluid={aboutPicture.childImageSharp.fluid} alt="Olympia Bukkakis' portrait" className="portrait" />
-            </div>
-            <div className="col-text col-md-6">
-              <h2 className="contact">
-                Contact <br />
+              <small>Photography: {about.frontmatter.photographer}</small>
+              <p className="contact">
+                Contact: <br />
                 <a className="text-nowrap" href="mailto:mail&#64;olympiabukkakis.com">
                   <span>mail</span>
                   <span>&#64;</span>
@@ -28,7 +27,9 @@ function About({ data }) {
                   <span>bukkakkis</span>
                   <span>.com</span>
                 </a>
-              </h2>
+              </p>
+            </div>
+            <div className="col-text col-md-6">
               <div className="" dangerouslySetInnerHTML={{ __html: about.html }} />
             </div>
           </div>
@@ -46,7 +47,7 @@ export const query = graphql`
       id
       html
       frontmatter {
-        name
+        photographer
       }
     }
     aboutPicture: file(base: { eq: "about.jpg" }) {
