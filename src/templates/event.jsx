@@ -1,10 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Image from "gatsby-image";
 
+import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import Back from "../components/Back";
-import Image from "gatsby-image";
-import SEO from "../components/SEO";
+import FbLink from "../components/FbLink";
 
 export default ({ data }) => {
   const { event, pictures } = data;
@@ -20,14 +21,15 @@ export default ({ data }) => {
       <Layout>
         <Back />
         <article className="event container container-sm">
-          <div className="event-header">
-            <h1>{event.frontmatter.title}</h1>
-            <h3 className="muted font-weight-normal">
-              {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
-            </h3>
+          <div className="event-header row align-items-start">
+            <div className="">
+              <h1>{event.frontmatter.title}</h1>
+              <h3 className="muted font-weight-normal">
+                {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
+              </h3>
+            </div>
+            <FbLink link={event.frontmatter.link} />
           </div>
-          <a href={event.frontmatter.link}>View on Facebook</a>
-          <p className="event-description">{event.frontmatter.description}</p>
           <div className="event-text mb-5" dangerouslySetInnerHTML={{ __html: event.html }} />
           <div className="event-gallery">
             {eventPictures.map(({ node }) => (

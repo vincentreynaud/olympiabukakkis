@@ -28,16 +28,20 @@ function Events({ data }) {
                   <Image
                     fluid={picture.node.childImageSharp.fluid}
                     alt={node.frontmatter.title + " event poster"}
-                    style={{ width: "100%", height: "33vmin", marginBottom: "0.75rem" }}
+                    style={{ width: "100%", height: "33vmin", marginBottom: "1.5rem" }}
                     imgStyle={{}}
                   />
                 </Link>
+
                 <Link to={node.fields.slug}>
-                  <h1 className="event-title">{node.frontmatter.title}</h1>
+                  <h2 className="event-title">{node.frontmatter.title}</h2>
                 </Link>
-                <p>
-                  {node.frontmatter.date} &middot; {node.frontmatter.time} &middot; {node.frontmatter.venue}
-                </p>
+                <h2 className="event-details">
+                  <small>
+                    {node.frontmatter.date} &middot; {node.frontmatter.time} &middot; {node.frontmatter.venue}
+                  </small>
+                </h2>
+                <p className="event-description">{node.frontmatter.description}</p>
               </article>
             );
           })}
