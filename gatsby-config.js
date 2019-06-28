@@ -51,10 +51,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Lewis Gatsby Starter Blog",
-        short_name: "Lewis Gatsby Starter Blog",
+        name: "Olympia Bukkakis",
         start_url: "/",
-        background_color: "#ffffff",
+        background_color: "#000000",
         theme_color: "#ffffff",
         display: "minimal-ui",
         icon: "src/images/icon.png"
