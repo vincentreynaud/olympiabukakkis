@@ -2,8 +2,8 @@
 type: "work"
 title: "Tales From a State of Shemergency"
 id: "shemergency"
-date_start: "2018-11-22"
-date_end:
+startDate: "2018-11-22"
+endDate: ""
 description: "Marx remarks somewhere that all great world-historic facts and personages appear, so to speak, twice. He forgot to add: the first time as tragedy, the second time as travesty - Olympia Bukkakis" 
 video: ""
 photographer: "Marc Seestaedt"

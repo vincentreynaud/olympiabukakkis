@@ -2,8 +2,8 @@
 type: "work"
 title: "Makeup Tutorial: How to Look Great Without Having to High Five Straight Men"
 id: "makeup-tutorial"
-date_start: "2016-10-12"
-date_end:
+startDate: "2016-10-12"
+endDate: ""
 description: "A youtube makeup tutorial to help navigate everyday pressures for the queen with no shits left to give." 
 video: "https://www.youtube.com/watch?v=9eq2fa50ETU&t=872s"
 photographer: "Olympia Bukkakis"

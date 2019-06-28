@@ -19,7 +19,10 @@ export default ({ data }) => {
         <article className="work container container-sm">
           <div className="work-header">
             <h1>{work.frontmatter.title}</h1>
-            <h3 className="muted font-weight-normal">{work.frontmatter.date}</h3>
+            <h3 className="muted font-weight-normal">
+              {work.frontmatter.startDate}
+              {work.frontmatter.endDate !== "" && <span> &ndash; {work.frontmatter.endDate}</span>}
+            </h3>
           </div>
           <div className="work-text" dangerouslySetInnerHTML={{ __html: work.html }} />
 
@@ -52,7 +55,8 @@ export const query = graphql`
       frontmatter {
         id
         title
-        date(formatString: "MMMM YYYY")
+        startDate(formatString: "MMMM YYYY")
+        endDate
         video
         photographer
       }

@@ -100,7 +100,11 @@ class Index extends Component {
 
                   <h2 className="work-title">
                     <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                    <small className="work-date"> &middot; {node.frontmatter.date}</small>
+                    <small className="work-date">
+                      {" "}
+                      &middot; {node.frontmatter.startDate}
+                      {node.frontmatter.endDate !== "" && <span> &ndash; {node.frontmatter.endDate}</span>}
+                    </small>
                   </h2>
 
                   <p className="work-description">{node.frontmatter.description}</p>
@@ -118,7 +122,7 @@ export const query = graphql`
   query {
     work: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "work" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___startDate], order: DESC }
     ) {
       edges {
         node {
@@ -126,7 +130,8 @@ export const query = graphql`
           frontmatter {
             id
             title
-            date(formatString: "MMM YYYY")
+            startDate(formatString: "MMM YYYY")
+            endDate
             description
           }
           fields {
