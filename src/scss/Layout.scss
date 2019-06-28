@@ -49,17 +49,61 @@ p {
   @include font-size($font-size-body);
 }
 
-// reset
-a {
-  &:hover,
-  &.active {
-    text-decoration: underline !important;
+.theme-dark,
+.theme-light {
+  a {
+    &:hover,
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
 
 /* =======================
     LAYOUT
 ======================= */
+
+.theme-dark {
+  color: $light;
+  background-color: $black;
+
+  a {
+    color: $light;
+
+    &:hover {
+      color: $white !important;
+    }
+
+    &.active {
+      color: $white;
+    }
+  }
+
+  button,
+  a {
+    fill: $white;
+    background-color: rgba($black, 0.85);
+  }
+}
+
+.theme-light {
+  color: $dark;
+  background-color: $light;
+
+  button,
+  a {
+    color: $dark;
+    fill: $dark;
+    background-color: rgba($light, 0.85);
+  }
+
+  .navbar-brand {
+    &:hover,
+    &.active {
+      text-decoration: underline !important;
+    }
+  }
+}
 
 .layout {
   z-index: 1;
@@ -96,40 +140,6 @@ a {
   @include media-breakpoint-up(xl) {
     padding-top: $base-layout-pt;
     padding-bottom: $main-pb-xl;
-  }
-}
-
-.theme-dark {
-  color: $light;
-  background-color: $black;
-
-  a {
-    color: $light;
-
-    &:hover {
-      color: $white !important;
-    }
-
-    &.active {
-      color: $white;
-    }
-  }
-
-  button,
-  a {
-    fill: $white;
-    background-color: rgba($black, 0.85);
-  }
-}
-
-.theme-light {
-  color: $dark;
-  background-color: $light;
-
-  button,
-  a {
-    fill: $dark;
-    background-color: rgba($light, 0.85);
   }
 }
 
