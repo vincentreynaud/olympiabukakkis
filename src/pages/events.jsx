@@ -39,7 +39,8 @@ function Events({ data }) {
                 </Link>
                 <h2 className="event-details">
                   <small>
-                    {node.frontmatter.date} &middot; {node.frontmatter.time} &middot; {node.frontmatter.venue}
+                    {node.frontmatter.date} {node.frontmatter.time && <span>&middot; {node.frontmatter.time} </span>}{" "}
+                    &middot; {node.frontmatter.venue}
                   </small>
                 </h2>
                 <p className="event-description">{node.frontmatter.description}</p>

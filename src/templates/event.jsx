@@ -45,7 +45,8 @@ export default ({ data }) => {
                 <div className="">
                   <h1>{event.frontmatter.title}</h1>
                   <h3 className="muted font-weight-normal d-inline">
-                    {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
+                    {event.frontmatter.date} {event.frontmatter.time && <span>&middot; {event.frontmatter.time} </span>}
+                    &middot; {event.frontmatter.venue}
                   </h3>
                   <span className="text-right">
                     <FbLink link={event.frontmatter.link} />
