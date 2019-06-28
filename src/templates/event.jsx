@@ -5,7 +5,7 @@ import Image from "gatsby-image";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import Back from "../components/Back";
-import FbLink from "../components/FbLink";
+import EventLink from "../components/EventLink";
 
 export default ({ data }) => {
   const { event, pictures } = data;
@@ -39,18 +39,16 @@ export default ({ data }) => {
                   <small>Artwork: {event.frontmatter.artwork}</small>
                 </div>
               )}
+              <EventLink link={event.frontmatter.link} />
             </div>
             <div className="col-text col-lg-6">
               <div className="event-header row align-items-start">
                 <div className="">
                   <h1>{event.frontmatter.title}</h1>
-                  <h3 className="muted font-weight-normal d-inline">
+                  <h3 className="muted font-weight-normal">
                     {event.frontmatter.date} {event.frontmatter.time && <span>&middot; {event.frontmatter.time} </span>}
                     &middot; {event.frontmatter.venue}
                   </h3>
-                  <span className="text-right">
-                    <FbLink link={event.frontmatter.link} />
-                  </span>
                 </div>
               </div>
               <div className="event-text" dangerouslySetInnerHTML={{ __html: event.html }} />
