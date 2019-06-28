@@ -36,14 +36,15 @@
     }
   }
 
+  // using transform: scale() might be better for performance
   .scale-up {
-    // transform: translateY(-50%) scale(1);
     font-size: 7.2rem;
+    // transform: translateY(-50%) scale(1);
   }
 
   .scale-down {
-    // transform: translateY(-50%) scale(0.26, 0.25);
     font-size: 1.6rem !important;
+    // transform: translateY(-50%) scale(0.26, 0.25);
   }
 
   .navbar-toggler {

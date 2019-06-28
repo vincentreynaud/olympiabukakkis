@@ -25,6 +25,7 @@ class Navigation extends Component {
 
   render() {
     const { title, hideNav = false, scaleUp } = this.props;
+    // use window.location.href to remove font-size transition
 
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
