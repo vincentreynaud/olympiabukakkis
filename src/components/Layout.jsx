@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import classnames from "classnames";
 
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -28,17 +29,22 @@ class Layout extends Component {
   }
 
   render() {
-    const { children, theme = "theme-dark", hideNav } = this.props;
+    const { children, themeLight, hideNav, scaleUp } = this.props;
 
     return (
       <StaticQuery
         query={query}
         render={data => {
           return (
-            <div className={"layout " + theme}>
+            <div className={classnames({ layout: true, "theme-dark": !themeLight, "theme-light": themeLight })}>
               <div className="row">
                 <div className="col-nav col-xl-4">
-                  <Navigation title={data.site.siteMetadata.title} handleScroll={this.handleScroll} hideNav={hideNav} />
+                  <Navigation
+                    title={data.site.siteMetadata.title}
+                    handleScroll={this.handleScroll}
+                    hideNav={hideNav}
+                    scaleUp={scaleUp}
+                  />
                 </div>
                 <div className="col-main col-xl-8">
                   <main className="main">{children}</main>

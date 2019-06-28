@@ -29,7 +29,7 @@ export default ({ data }) => {
                 key={node.id}
                 fluid={node.childImageSharp.fluid}
                 alt={work.frontmatter.title + " picture"}
-                style={{ width: "100%", marginBottom: "1rem", display: "inline-block" }}
+                style={{ width: "100%", marginBottom: "0.75rem", display: "inline-block" }}
                 imgStyle={{ height: "auto" }}
               />
             ))}

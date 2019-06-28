@@ -1,6 +1,6 @@
 ---
 type: "about"
-name: "About"
+photographer: "Henry Laurisch"
 ---
 Queen of the Heavens and of the Earth, Empress of Despair, and Architect of Your Eternal Suffering, Olympia Bukkakis began performing while completing a BA in social theory at Melbourne University in Australia and kick-started the local alternative drag scene with her party *Pandora’s Box*. She has collaborated with Australian queer theatre company Sisters Grimm on a number of projects including *Summertime in the Garden of Eden*. 
 
