@@ -79,8 +79,13 @@ p {
     }
   }
 
+  a,
   button {
-    fill: $white;
+    color: $light;
+    fill: $white !important;
+  }
+
+  button {
     background-color: rgba($black, 0.85);
   }
 }
@@ -89,10 +94,13 @@ p {
   color: $dark;
   background-color: $light;
 
-  button,
-  a {
+  a,
+  button {
     color: $dark;
-    fill: $dark;
+    fill: $dark !important;
+  }
+
+  button {
     background-color: rgba($light, 0.85);
   }
 
