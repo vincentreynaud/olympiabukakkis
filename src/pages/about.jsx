@@ -10,7 +10,6 @@ import BtnCopy from "../components/BtnCopy";
 
 function About({ data }) {
   const { about, aboutPicture } = data;
-  const [tooltipOpen, toggle] = useState(false);
 
   return (
     <>
@@ -26,7 +25,7 @@ function About({ data }) {
                 Contact: <br />
                 <BtnCopy coptItem="mail@olympiabukkakis.com">
                   <span>mail</span>
-                  <span className="text-nowrap">&#64;olympiabukkakkis</span>
+                  <span className="text-nowrap">&#64;olympiabukkakis</span>
                   <span>.com</span>
                 </BtnCopy>
               </p>

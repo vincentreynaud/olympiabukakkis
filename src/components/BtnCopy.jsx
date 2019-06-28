@@ -1,19 +1,39 @@
 import React, { Component } from "react";
-import { Tooltip } from "reactstrap";
+import classnames from "classnames";
 
 class BtnCopy extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      tooltipOpen: false
+      tooltip: null
     };
   }
 
-  toggle = () => {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
+  componentDidMount() {
+    this.state.tooltip = document.querySelector(".tooltip");
+  }
+
+  toggle = el => {
+    this.show(el);
+    setTimeout(() => {
+      this.hide(el);
+    }, 3200);
+  };
+
+  // duplicates !!!!
+  hide = el => {
+    if (el.classList.contains("show") || !el.classList.contains("hide")) {
+      el.classList.remove("show");
+      el.classList.add("hide");
+    }
+  };
+
+  show = el => {
+    if (el.classList.contains("hide")) {
+      el.classList.remove("hide");
+      el.classList.add("show");
+    }
   };
 
   render() {
@@ -24,14 +44,15 @@ class BtnCopy extends Component {
         <button
           id="btn-copy"
           onClick={() => {
+            this.toggle(this.state.tooltip);
             navigator.clipboard.writeText(copyItem).then(() => console.log("copied!"), err => console.error(err));
           }}
         >
           {children}
-          <Tooltip target="btn-copy" placement="bottom" isOpen={this.state.tooltipOpen} toggle={this.toggle}>
-            Click to copy email
-          </Tooltip>
         </button>
+        <div className="tooltip hide">
+          <small>Copied to clipboard!</small>
+        </div>
       </>
     );
   }
