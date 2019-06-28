@@ -7,6 +7,7 @@ description: "Get Fucked: \n
 1.  To take into oneself the body of another \n
 2.	To ascend to an altered/enlightened state \n
 3.	A command to either improve oneself or remove oneself from a situation." 
+video: ""
 photographer: "Brigid Cara"
 ---
 
