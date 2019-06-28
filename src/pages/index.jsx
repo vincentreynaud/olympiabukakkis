@@ -81,7 +81,10 @@ class Index extends Component {
           <section id="work" className="container container-sm">
             {work.edges.map(({ node }) => {
               const workRegex = new RegExp(node.frontmatter.id, "i");
-              const [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
+              let [picture] = pictures.edges.filter(
+                ({ node }) => node.base.match(workRegex) && node.base.match(/cover/i)
+              );
+              if (!picture) [picture] = pictures.edges.filter(({ node }) => node.base.match(workRegex));
 
               return (
                 <div className="work" key={node.id}>
@@ -90,16 +93,15 @@ class Index extends Component {
                       <Image
                         fluid={picture.node.childImageSharp.fluid}
                         alt={node.frontmatter.title + " picture"}
-                        style={{ width: "100%", height: "50vmin", marginBottom: "1rem" }}
-                        imgStyle={{}}
+                        style={{ width: "100%", height: "50vmin", marginBottom: "2rem" }}
                       />
                     )}
                   </Link>
-                  <Link to={node.fields.slug}>
-                    <h2 className="work-title">
-                      {node.frontmatter.title} <small className="work-date">&mdash; {node.frontmatter.date}</small>
-                    </h2>
-                  </Link>
+
+                  <h2 className="work-title">
+                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                    <small className="work-date"> &middot; {node.frontmatter.date}</small>
+                  </h2>
 
                   <p className="work-description">{node.frontmatter.description}</p>
                 </div>
@@ -124,7 +126,7 @@ export const query = graphql`
           frontmatter {
             id
             title
-            date(formatString: "DD MMM YYYY")
+            date(formatString: "MMM YYYY")
             description
           }
           fields {
