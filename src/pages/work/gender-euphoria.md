@@ -5,7 +5,7 @@ id: "gender-euphoria"
 startDate: "2019-01-18"
 endDate: ""
 description: "GENDER EUPHORIA has evolved through many forms. Originally conceived as a book chapter, then developed into a lecture, then a university presentation, and finally into a 90 minute drag/cabaret/lecture/dance hybrid, it is a critical discussion of gender, in drag." 
-video: "http://www.tanzforumberlin.de/en/production/gender-euphoria/"
+video: "https://player.vimeo.com/video/312719664"
 photographer: "Gerhard F. Ludwig"
 ---
 

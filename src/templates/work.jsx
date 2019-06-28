@@ -27,11 +27,24 @@ export default ({ data }) => {
           <div className="work-text" dangerouslySetInnerHTML={{ __html: work.html }} />
 
           <div className="work-gallery">
+            {work.frontmatter.video !== "" && (
+              <div className="work-video">
+                <iframe
+                  src={work.frontmatter.video}
+                  title={work.frontmatter.title + " trailer"}
+                  width="100%"
+                  frameborder="0"
+                  allow="autoplay; fullscreen"
+                  allowfullscreen
+                />
+              </div>
+            )}
             {workPictures.map(({ node }) => (
               <Image
                 key={node.id}
                 fluid={node.childImageSharp.fluid}
-                alt={work.frontmatter.title + " picture"}
+                title={work.frontmatter.title + " photograph"}
+                alt={work.frontmatter.title + " photograph"}
                 style={{ width: "100%", marginBottom: "0.75rem", display: "inline-block" }}
                 imgStyle={{ height: "auto" }}
               />
