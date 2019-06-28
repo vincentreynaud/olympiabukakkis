@@ -2,7 +2,8 @@
 type: "work"
 title: "Gender Euphoria: Drag as a Construction Site for New Gender Realities"
 id: "gender-euphoria"
-date: "2019-01-18"
+date_start: "2019-01-18"
+date_end:
 description: "GENDER EUPHORIA has evolved through many forms. Originally conceived as a book chapter, then developed into a lecture, then a university presentation, and finally into a 90 minute drag/cabaret/lecture/dance hybrid, it is a critical discussion of gender, in drag." 
 video: "http://www.tanzforumberlin.de/en/production/gender-euphoria/"
 photographer: "Gerhard F. Ludwig"
@@ -16,4 +17,12 @@ Conceiving drag as a construction site where new knowledges about gender and sex
 
 Drawing on dance, lecture, drag, and cabaret, Bukkakis and her team offer a moment away from the outside world to explore the political significance of Gender Euphoria.
 
+Performed, written and choreographed by Olympia Bukkakis   
+Guest Performers: Oozing Gloop, Oly Stash, Cheryl   
+Dramaturgy: Allison Wiltshire  
+Set: Camille Lacadee  
+Costume: Alexander Mersmann  
+Sound: Vincent Reynaud  
+Light: Mmakgosi Kgabi, Emilio Cordero Checa  
+Dramaturgical Accompaniment: Isabel Gatzke  
 

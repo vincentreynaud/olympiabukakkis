@@ -2,7 +2,8 @@
 type: "work"
 title: "Get Fucked"
 id: "get-fucked"
-date: "2019-03-01"
+date_start: 2019-08-19"
+date_end:
 description: "Get Fucked: \n
 1.  To take into oneself the body of another \n
 2.	To ascend to an altered/enlightened state \n
