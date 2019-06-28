@@ -237,7 +237,26 @@ p {
 
   .work-video {
     margin-bottom: 1.5rem;
-    height: 50vh;
+
+    iframe {
+      min-height: 50vmin;
+
+      @include media-breakpoint-up(md) {
+        min-height: 50vmin;
+      }
+
+      @include media-breakpoint-up(lg) {
+        min-height: 50vmin;
+      }
+
+      @include media-breakpoint-up(xl) {
+        min-height: 40vmin;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        min-height: 60vmin;
+      }
+    }
   }
 }
 

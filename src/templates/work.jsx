@@ -9,7 +9,7 @@ import SEO from "../components/SEO";
 export default ({ data }) => {
   const { work, pictures } = data;
   const workRegex = new RegExp(work.frontmatter.id, "i");
-  const workPictures = pictures.edges.filter(({ node }) => node.base.match(workRegex));
+  const workPictures = pictures.edges.filter(({ node }) => node.base.match(workRegex) && !node.base.match(/cover/i));
 
   return (
     <>
@@ -33,7 +33,6 @@ export default ({ data }) => {
                   src={work.frontmatter.video}
                   title={work.frontmatter.title + " trailer"}
                   width="100%"
-                  height="100%"
                   frameBorder="0"
                   allow="autoplay; fullscreen"
                   allowFullScreen
