@@ -26,8 +26,8 @@ class Navigation extends Component {
   render() {
     const { title, hideNav = false, scaleUp } = this.props;
     // use window.location.href to remove font-size transition
-    const workRegex = new RegExp(/work/, "i");
-    const workIsActive = workRegex.test(window.location.href);
+    // const workRegex = new RegExp(/work/, "i");
+    // const workIsActive = workRegex.test(window.location.href);
     // const aboutIsActive = window.location.href.includes(/\/about$/i);
     // const eventsIsActive = window.location.href.includes(/events/i);
 
