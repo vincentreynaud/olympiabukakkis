@@ -21,32 +21,40 @@ export default ({ data }) => {
       <Layout>
         <Back />
         <article className="event container container-sm">
-          <div className="event-header row align-items-start">
-            <div className="">
-              <h1>{event.frontmatter.title}</h1>
-              <h3 className="muted font-weight-normal">
-                {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
-              </h3>
+          <div className="row no-gutters">
+            <div className="col-pic col-lg-6">
+              <div className="event-artwork">
+                {eventPictures.map(({ node }) => (
+                  <Image
+                    key={node.id}
+                    fluid={node.childImageSharp.fluid}
+                    alt={event.frontmatter.title + " artwork"}
+                    className="artwork-wrapper"
+                    imgStyle={{ height: "auto" }}
+                  />
+                ))}
+              </div>
+              {event.frontmatter.artwork && (
+                <div className="event-credits">
+                  <small>Artwork: {event.frontmatter.artwork}</small>
+                </div>
+              )}
             </div>
-            <FbLink link={event.frontmatter.link} />
-          </div>
-          <div className="event-text mb-5" dangerouslySetInnerHTML={{ __html: event.html }} />
-          <div className="event-gallery">
-            {eventPictures.map(({ node }) => (
-              <Image
-                key={node.id}
-                fluid={node.childImageSharp.fluid}
-                alt={event.frontmatter.title + " picture"}
-                style={{ width: "100%", marginBottom: "1rem", display: "inline-block" }}
-                imgStyle={{ height: "auto" }}
-              />
-            ))}
-          </div>
-          {event.frontmatter.artwork && (
-            <div className="event-credits">
-              <small>Artwork: {event.frontmatter.artwork}</small>
+            <div className="col-text col-lg-6">
+              <div className="event-header row align-items-start">
+                <div className="">
+                  <h1>{event.frontmatter.title}</h1>
+                  <h3 className="muted font-weight-normal d-inline">
+                    {event.frontmatter.date} &middot; {event.frontmatter.time} &middot; {event.frontmatter.venue}
+                  </h3>
+                  <span className="text-right">
+                    <FbLink link={event.frontmatter.link} />
+                  </span>
+                </div>
+              </div>
+              <div className="event-text" dangerouslySetInnerHTML={{ __html: event.html }} />
             </div>
-          )}
+          </div>
         </article>
       </Layout>
     </>
