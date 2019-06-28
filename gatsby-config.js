@@ -19,7 +19,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
-        path: `${__dirname}/static/icon.png`
+        path: `${__dirname}/src`
       }
     },
     "gatsby-plugin-catch-links",
@@ -56,7 +56,7 @@ module.exports = {
         background_color: "#000000",
         theme_color: "#ffffff",
         display: "minimal-ui",
-        icon: "src/images/icon.png"
+        icon: "static/icon.png"
       }
     },
     "gatsby-plugin-offline",
