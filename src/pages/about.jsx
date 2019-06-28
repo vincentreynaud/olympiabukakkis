@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import { Tooltip } from "reactstrap";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Back from "../components/Back";
+import BtnCopy from "../components/BtnCopy";
 
 function About({ data }) {
   const { about, aboutPicture } = data;
+  const [tooltipOpen, toggle] = useState(false);
+
   return (
     <>
       <SEO />
@@ -20,13 +24,11 @@ function About({ data }) {
               <small>Photography: {about.frontmatter.photographer}</small>
               <p className="contact">
                 Contact: <br />
-                <a className="text-nowrap" href="mailto:mail&#64;olympiabukkakis.com">
+                <BtnCopy coptItem="mail@olympiabukkakis.com">
                   <span>mail</span>
-                  <span>&#64;</span>
-                  <span>olympia</span>
-                  <span>bukkakkis</span>
+                  <span className="text-nowrap">&#64;olympiabukkakkis</span>
                   <span>.com</span>
-                </a>
+                </BtnCopy>
               </p>
             </div>
             <div className="col-text col-md-6">
