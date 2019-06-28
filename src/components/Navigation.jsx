@@ -34,7 +34,7 @@ class Navigation extends Component {
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
         <div className="d-flex justify-content-between align-items-center w-100">
-          <NavbarBrand style={scaleUp && { fontSize: "7.2rem" }} href="/about">
+          <NavbarBrand style={scaleUp && { fontSize: "7.2rem", left: "500%" }} href="/about">
             {title}
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
