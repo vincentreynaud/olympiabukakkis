@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import Scrollspy from "react-scrollspy";
-import classNames from "classnames";
+import classnames from "classnames";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from "reactstrap";
 
 class Navigation extends Component {
@@ -43,7 +43,7 @@ class Navigation extends Component {
           >
             <NavItem>
               <Link
-                className={classNames({ "nav-link": true, bottom: true, hide: hideNav })}
+                className={classnames({ "nav-link": true, bottom: true, hide: hideNav })}
                 to="#work"
                 activeClassName="active"
               >
@@ -52,7 +52,7 @@ class Navigation extends Component {
             </NavItem>
             <NavItem>
               <Link
-                className={classNames({ "nav-link": true, top: true, hide: hideNav })}
+                className={classnames({ "nav-link": true, top: true, hide: hideNav })}
                 to="/events"
                 activeClassName="active"
               >

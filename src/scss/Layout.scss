@@ -64,6 +64,7 @@ a {
 .layout {
   z-index: 1;
   position: relative;
+  transition: background-color 1s ease-out; // not working
 
   .col-nav {
     @include media-breakpoint-up(xl) {
