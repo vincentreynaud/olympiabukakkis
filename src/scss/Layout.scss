@@ -79,8 +79,7 @@ p {
     }
   }
 
-  button,
-  a {
+  button {
     fill: $white;
     background-color: rgba($black, 0.85);
   }
@@ -95,6 +94,10 @@ p {
     color: $dark;
     fill: $dark;
     background-color: rgba($light, 0.85);
+  }
+
+  .navbar {
+    background: transparent;
   }
 
   .navbar-brand {
@@ -132,6 +135,7 @@ p {
 }
 
 .main {
+  min-height: 100vh;
   padding-top: $base-layout-pt + 3rem;
   padding-bottom: $main-pb;
   @include pl($base-layout-px);
@@ -219,6 +223,14 @@ p {
   width: $nav-arrow-size;
   border: 0;
   border-radius: 2rem;
+
+  &.top {
+    top: calc(#{$base-layout-pt} + 2.25rem);
+
+    @include media-breakpoint-up(xl) {
+      top: $base-layout-pt;
+    }
+  }
 }
 
 .top {

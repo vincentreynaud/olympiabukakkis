@@ -23,22 +23,25 @@
     font-family: $font-family-title;
     @include font-size($font-size-lg);
     font-weight: 600;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: center left;
-    transition: font-size 0.3s ease-out, text-shadow 1s ease-out;
+    transition: text-shadow 1s ease-out;
 
     &:hover {
       text-shadow: 0px 0px 12px $white, 0px 0px 4px $white;
       text-decoration: none;
     }
+
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: center left;
+      transition: font-size 0.3s ease-out, text-shadow 1s ease-out;
+    }
   }
 
   // using transform: scale() might be better for performance
   .scale-up {
-    left: 500%;
+    left: 12vw;
     font-size: 7.2rem;
     // transform: translateY(-50%) scale(1);
   }
@@ -50,8 +53,11 @@
   }
 
   .navbar-toggler {
+    position: absolute;
+    @include top(2.5rem);
     @include font-size($font-size-lg);
     border: none;
+    background-color: transparent;
     padding: 0.8rem 0.4rem 0.4rem 0.4rem;
     color: $light;
   }
@@ -80,6 +86,14 @@
         display: inline;
         padding: 0;
         transition: opacity 0.3s ease-out;
+
+        &.bottom,
+        &.top {
+          position: static;
+          @include media-breakpoint-up(xl) {
+            position: absolute;
+          }
+        }
       }
     }
   }
