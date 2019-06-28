@@ -26,6 +26,7 @@
 
     position: absolute;
     top: 50%;
+    // left: 400%;
     transform: translateY(-50%);
     transform-origin: center left;
     transition: font-size 0.3s ease-out, text-shadow 1s ease-out;
@@ -43,6 +44,7 @@
   }
 
   .scale-down {
+    left: unset;
     font-size: 1.6rem !important;
     // transform: translateY(-50%) scale(0.26, 0.25);
   }

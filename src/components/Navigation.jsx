@@ -26,6 +26,10 @@ class Navigation extends Component {
   render() {
     const { title, hideNav = false, scaleUp } = this.props;
     // use window.location.href to remove font-size transition
+    const workRegex = new RegExp(/work/, "i");
+    const workIsActive = workRegex.test(window.location.href);
+    // const aboutIsActive = window.location.href.includes(/\/about$/i);
+    // const eventsIsActive = window.location.href.includes(/events/i);
 
     return (
       <Navbar expand="xl" className="flex-column align-items-start">
@@ -36,17 +40,13 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle}>MENU</NavbarToggler>
         </div>
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Scrollspy
-            items={["work", "events"]}
-            className="navbar-nav ml-auto nav-list"
-            currentClassName="active"
-            offset={800}
-          >
+          <Nav className="navbar-nav ml-auto nav-list">
             <NavItem>
               <Link
                 className={classnames({ "nav-link": true, bottom: true, hide: hideNav })}
-                to="#work"
+                to="/#work"
                 activeClassName="active"
+                partiallyActive={true}
               >
                 Work
               </Link>
@@ -56,11 +56,12 @@ class Navigation extends Component {
                 className={classnames({ "nav-link": true, top: true, hide: hideNav })}
                 to="/events"
                 activeClassName="active"
+                partiallyActive={true}
               >
                 Events
               </Link>
             </NavItem>
-          </Scrollspy>
+          </Nav>
         </Collapse>
       </Navbar>
     );
@@ -68,6 +69,9 @@ class Navigation extends Component {
 }
 
 export default Navigation;
+
+// <Scrollspy items={["work", "events", "about"]} currentClassName="active" offset={800}>
+// </Scrollspy>
 
 // {links.map((link, i) => (
 //   <NavItem key={i}>
