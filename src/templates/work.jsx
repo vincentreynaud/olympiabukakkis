@@ -33,6 +33,7 @@ export default ({ data }) => {
                   src={work.frontmatter.video}
                   title={work.frontmatter.title + " trailer"}
                   width="100%"
+                  height="100%"
                   frameBorder="0"
                   allow="autoplay; fullscreen"
                   allowFullScreen
