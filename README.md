@@ -2,16 +2,15 @@
 
 Hi! this is the documentation page for [Olympia Bukkakis' Website](https://olympiabukkakis.com/). Find bellow all the information you need to use and update the website. 
 
-##### For a non-programmer tutorial on Github you can have a look at this article: [A Dead Simple Intro to GitHub for the Non-Technical](https://medium.com/crowdbotics/a-dead-simple-intro-to-github-for-the-non-technical-f9d56410a856)
+**For a non-programmer tutorial on Github you can have a look at this article: [A Dead Simple Intro to GitHub for the Non-Technical](https://medium.com/crowdbotics/a-dead-simple-intro-to-github-for-the-non-technical-f9d56410a856)**
 
 ## Contributing new content on `master-source`
 
 ### Branches
 
-The website updates you make happen on the [olympiabukkakis repository](https://github.com/vincentreynaud/olympiabukkakis/tree/master-source) in the `master-source` branch. The `master` branch (always the default one when you get to the github repository) is reserved for the final version of the website, i.e. the one that the live site reads from. 
+The website updates you make happen on the [olympiabukkakis repository](https://github.com/vincentreynaud/olympiabukkakis/tree/master-source) in the `master-source` branch. The `master` branch (always the default one when you get to the github repository) is reserved for the final version of the website, i.e. the one that the live site reads from.  
 
-##### Please make sure that you are always on the `master-source` branch when making new contributions!! 
-New contributions on the `master` branch will most likely be ineffective and at worst generate bugs.
+**Please make sure that you are always on the `master-source` branch when making new contributions!!** New contributions on the `master` branch will most likely be ineffective and at worst generate bugs.
 
 ![branch selection](./static/branch-readme-pic.png)
 
@@ -115,8 +114,7 @@ For a quick and easy guide on how to write Markdown, checkout the [Markdown Chea
 
 #### Frontmatter
 
-The frontmatter is a section at the top of the Markdown file that is used to store additional information, for example the document title, the date, etc. This information is used to generate the pages and render their content. 
-##### Please be careful of entering these entries without misspellings and by respecting the markdown syntax carefully (i.e. the special characters `:` and `"`).
+The frontmatter is a section at the top of the Markdown file that is used to store additional information, for example the document title, the date, etc. This information is used to generate the pages and render their content. **Please be careful of entering these entries without misspellings and by respecting the markdown syntax carefully (i.e. the special characters `:` and `"`).**
 
 For example the frontmatter for a file in `src/pages/work` might look like this:
 
@@ -135,12 +133,12 @@ photographer: "Vincent Reynaud"
 
 The most crucial entries are the `type` and `title` ones, that are used notably for automatically generating the pages' urls.
 
-As an example:
+As an example:  
 The file `work-on-progress.md` with `type: "work"` and `title: "Work on Progress"` will generate a page under the url https://olympiabukkakis.com/work/work-on-progress/
 
 If these entries are entered incorrectly they will generate bugs and crash the build process for the website. Misspellings in other entries won't necessarily crash the website but will simply appear in the rendered website.
 
-**The titles per section need to be unique, in order for the site to differentiate between different documents**.
+##### The titles per section need to be unique, in order for the site to differentiate between different documents.
 
 #### Pages content
 
