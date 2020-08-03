@@ -136,9 +136,7 @@ The most crucial entries are the `type` and `title` ones, that are used notably 
 As an example:  
 The file `work-on-progress.md` with `type: "work"` and `title: "Work on Progress"` will generate a page under the url https://olympiabukkakis.com/work/work-on-progress/
 
-If these entries are entered incorrectly they will generate bugs and crash the build process for the website. Misspellings in other entries won't necessarily crash the website but will simply appear in the rendered website.
-
-##### The titles per section need to be unique, in order for the site to differentiate between different documents.
+If these entries are entered incorrectly they will generate bugs and crash the build process for the website. Misspellings in other entries won't necessarily crash the website but will simply appear in the rendered website. **The titles per section need to be unique, in order for the site to differentiate between different documents**.
 
 #### Pages content
 
