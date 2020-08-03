@@ -3,12 +3,11 @@ name: Deploy website
 on:
   push:
     branches:
-      - master-source
+      - 'master-source'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master-source'
     steps:
       - name: Run deploy script
         run: npm run deploy
