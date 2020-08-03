@@ -1,36 +1,32 @@
-<p align="center">
-  <a href="https://lecken.berlin">
-    <img alt="Lecken" src="src/images/logo-full-pink.svg" width="220" />
-  </a>
-</p>
+# Olympia Bukkakis
 
-Hi! this is the documentation page for [Olympia Bukkakis' Website](https://olympiabukkakis.com/). Find bellow all the information you need to use and update the website. Checkout the [Wording in our documentation](#Wording-in-our-documentation) section if you find a term you don't understand.
+Hi! this is the documentation page for [Olympia Bukkakis' Website](https://olympiabukkakis.com/). Find bellow all the information you need to use and update the website. 
 
-> For a non-programmer tutorial on Github you can have a look at this article: [A Dead Simple Intro to GitHub for the Non-Technical](https://medium.com/crowdbotics/a-dead-simple-intro-to-github-for-the-non-technical-f9d56410a856)
+##### For a non-programmer tutorial on Github you can have a look at this article: [A Dead Simple Intro to GitHub for the Non-Technical](https://medium.com/crowdbotics/a-dead-simple-intro-to-github-for-the-non-technical-f9d56410a856)
 
-# Contributing new content: `master-source`!
+## Contributing new content on `master-source`
 
-## Branches
+### Branches
 
 The website updates you make happen on the [olympiabukkakis repository](https://github.com/vincentreynaud/olympiabukkakis/tree/master-source) in the `master-source` branch. The `master` branch (always the default one when you get to the github repository) is reserved for the final version of the website, i.e. the one that the live site reads from. 
 
-#### Please make sure that you are always on the `master-source` branch when making new contributions!! 
+##### Please make sure that you are always on the `master-source` branch when making new contributions!! 
 New contributions on the `master` branch will most likely be ineffective and at worst generate bugs.
 
 ![branch selection](./static/branch-readme-pic.png)
 
 
-## Folders
+### Folders
 
-Updating the website's content will happen in 2 places: the `data` folder, which contains the textual information in Markdown format, and the `images` folder where you will place the visual content. The website is then generated taking the content you provided, passing it through our templates, and rendering it into web pages.
+Updating the website's content will happen in 2 places: the `pages` folder, which contains the textual information in Markdown format, and the `images` folder where you will place the visual content. The website is then generated taking the content you provided, passing it through templates, and rendering it into web pages.
 
-## Content requirements
+### Content requirements
 
-### Image formats
+#### Image formats
 
 For images across the whole website, use either `jpg` or `png`
 
-### General naming conventions
+#### General naming conventions
 
 Please use the following naming conventions for new files you add:
 
@@ -44,9 +40,9 @@ gender-euphoria.md
 gender-euphoria-04.jpg
 ```
 
-# Images
+## Images
 
-## Placing images
+### Placing images
 
 Under `src/images` are folders dedicated to the relevant sections of the website:
 
@@ -59,7 +55,7 @@ src
 
 Place new images in their respective sections.
 
-## Naming pattern
+### Naming pattern
 
 Name the images following our [naming conventions](#General-naming-conventions) and following this pattern:
 
@@ -74,7 +70,7 @@ gender-euphoria-02.jpg
 
 The id you write in the `md` document's frontmatter (see [bellow](#Frontmatter)) **must** correspond to the id you use for naming the image, otherwise the images will not be found. 
 
-### Numbering
+#### Numbering
 
 Please write the numbering with always 2 digits, so for example `01` instead of `1`
 
@@ -87,12 +83,12 @@ gender-euphoria-04.jpg
 gender-euphoria-05.jpg
 ```
 
-# Markdown
+## Markdown
 
 Markdown is an easy-to-read, easy-to-write plain text formatting syntax. It allows you to quickly draft a document with some basic structure which we then use to generate the website's pages.
 The files in Markdown format end with `.md`.
 
-## Naming `md` files
+### Naming `md` files
 
 Under `src/pages` you can find folders dedicated to the relevant sections of the website:
 
@@ -113,14 +109,14 @@ src
 
 Again, name the files following our [naming conventions](#General-naming-conventions). A good practice is to name your files the same way you write the id in their frontmatter.
 
-## Writing `md` files
+### Writing `md` files
 
 For a quick and easy guide on how to write Markdown, checkout the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). I recommend that you use [CodiMD](https://demo.codimd.org/) to write your documents in Markdown and have a direct view on how the syntax is rendered on a web page. It will help spot mistakes easily.
 
-### Frontmatter
+#### Frontmatter
 
 The frontmatter is a section at the top of the Markdown file that is used to store additional information, for example the document title, the date, etc. This information is used to generate the pages and render their content. 
-#### Please be careful of entering these entries without misspellings and by respecting the markdown syntax carefully (i.e. the special characters `:` and `"`).
+##### Please be careful of entering these entries without misspellings and by respecting the markdown syntax carefully (i.e. the special characters `:` and `"`).
 
 For example the frontmatter for a file in `src/pages/work` might look like this:
 
@@ -146,11 +142,11 @@ If these entries are entered incorrectly they will generate bugs and crash the b
 
 **The titles per section need to be unique, in order for the site to differentiate between different documents**.
 
-### Pages content
+#### Pages content
 
 The content following the frontmatter can be written in plain text, and you can freely use the [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to format the content.
 
-### Dates
+#### Dates
 
 Dates need to be written following the [ISO Standard](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) `YYYY-MM-DD`. They are automatically processed and displayed in the desired format.
 
@@ -159,9 +155,9 @@ An example for `27 December 2019`:
 2019-12-27
 ```
 
-### Frontmatters by file type
+#### Frontmatters by file type
 
-#### About
+##### About
 
 ```
 ---
@@ -172,7 +168,7 @@ photographer: "Henry Laurisch"
 
 Change the photographer's name if the photo changes.
 
-#### Work
+##### Work
 
 ```
 ---
@@ -187,16 +183,17 @@ photographer: "Vincent Reynaud"
 ---
 ```
 
-| Entry        | Description           | Content | Required |
-| ------------- |:-------------| ----- | ---- |
-| `type`    | Type of the document | `work` | yes | 
-| `title`    | Display title    | Anything you want to call it | yes |
-| `id`      | The identifier used to find the page's pictures  | Must be unique (not already used), lower case with dashes, no spaces  | yes |
-| `startDate`  | Start date of the project    |  Date in the format mentioned [above](#Dates)   | yes |
-| `endDate`      |  End date of the project. If empty, Only start date is shown    |  Date in the format mentioned [above](#Dates) | no |
-| `description`      | Short preview of the project shown on the homepage  | A sentence  | no |
-| `video`      |  Video document   |  Valid url to a youtube or vimeo video | no |
-| `photographer`      |  Photo credit   |  Name of the photographer | no |
+| Entry          | Description                                                 | Content                                                              | Required |
+|----------------|-------------------------------------------------------------|----------------------------------------------------------------------|----------|
+| `type`         | Type of the document                                        | `work`                                                               | yes      |
+| `title`        | Display title                                               | Anything you want to call it                                         | yes      |
+| `id`           | The identifier used to find the page's pictures             | Must be unique (not already used), lower case with dashes, no spaces | yes      |
+| `startDate`    | Start date of the project                                   | Date in the format mentioned [above](#Dates)                         | yes      |
+| `endDate`      | End date of the project. If empty, Only start date is shown | Date in the format mentioned [above](#Dates)                         | no       |
+| `description`  | Short preview of the project shown on the homepage          | A sentence                                                           | no       |
+| `video`        | Video document                                              | Valid url to a youtube or vimeo video                                | no       |
+| `photographer` | Photo credit                                                | Name of the photographer                                             | no       |
+
 
 To leave an entry empty, leave a `""`, for example:
 
@@ -204,7 +201,7 @@ To leave an entry empty, leave a `""`, for example:
 endDate: ""
 ```
 
-#### Events
+##### Events
 
 ```
 ---
@@ -219,24 +216,24 @@ link: "https://www.facebook.com/events/195368511155813/"
 artwork: "Severus Heyn"
 ---
 ```
+| Entry         | Description                                           | Content                                                              | Required |
+|---------------|-------------------------------------------------------|----------------------------------------------------------------------|----------|
+| `type`        | Type of the document                                  | `event`                                                              | yes      |
+| `title`       | Display title                                         | Anything you want to call it                                         | yes      |
+| `id`          | The identifier used to find the page's pictures       | Must be unique (not already used), lower case with dashes, no spaces | yes      |
+| `date`        | Date of the event                                     | Date in the format mentioned [above](#Dates)                         | yes      |
+| `time`        | Time of the event                                     | Write it the way you want to see it shown                            | no       |
+| `venue`       | Event venue                                           | Valid url to a Youtube or Vimeo video                                | yes      |
+| `description` | Short preview of the project shown on the events page | A sentence                                                           | yes      |
+| `link`        | Event link shown at `More info...`                    | Valide url to the event page (possibly on facebook)                  | yes      |
+| `artwork`     | Event artwork credit                                  | Name of the designer                                                 | no       |
 
-| Entry        | Description           | Content | Required |
-| ------------- |:-------------| ----- | ---- |
-| `type`    | Type of the document | `event` | yes | 
-| `title`    | Display title    | Anything you want to call it | yes |
-| `id`      | The identifier used to find the page's pictures  | Must be unique (not already used), lower case with dashes, no spaces  | yes |
-| `date`  |  Date of the event    |  Date in the format mentioned [above](#Dates)   | yes |
-| `time`      |  Time of the event   |  Write it the way you want to see it shown | no |
-| `venue`      |  Event venue   |  Valid url to a Youtube or Vimeo video | yes |
-| `description`      | Short preview of the project shown on the events page  | A sentence  | yes |
-| `link`      |  Event link shown at `More info...`   |  Valide url to the event page (possibly on facebook) | yes |
-| `artwork`      |  Event artwork credit   |  Name of the designer | no |
 
-## Notes on Markdown syntax
+### Notes on Markdown syntax
 
 For a complete documentation on the Markdown syntax, please refer to the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-### Line breaks
+#### Line breaks
 
 In plain text (i.e. the text you write without any particular markdown syntax), the syntax to print a new line is to add 2 spaces at the end of your current line.
 
@@ -279,7 +276,7 @@ soft performative interventions
 female gaze video productions
 
 
-### Backlash Escapes
+#### Backlash Escapes
 
 Markdown allows to use a backslash to generate literal characters which would otherwise have a special meaning in Markdown’s formatting syntax. Use a backlash just before the character you need to 'escape'.
 
@@ -308,6 +305,6 @@ _ underscore
 
 You will notice that some of these characters sometimes get away with not having a backlash escape, for example when they are in the middle of a paragraph. You will always be able to spot an transcription error using the editor we suggested [CodiMD](https://demo.codimd.org/).
 
-# Feedback
+## Feedback
 
 Let me know if some parts of our documentation are unclear or if something is missing ;)
