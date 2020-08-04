@@ -13,11 +13,11 @@ We find ourselves in the social, political, environmental and economic wreckage 
 
 Inspired by, and responding to, this complex set of interdependent relations, Under Pressures is an immersive durational performance, bringing audience, performer and set into a series of contingent encounters. The audience are invited into a post- or pre- apocalyptic shelter occupied by an individual. They embody various personae and use speech, music, lipsync, dance, games and ritual in an attempt to construct or remember a self while provoking new relations.
 
-Production & Concept: Olympia Bukkakis, Camille Lacadee, Isabel Gatzke
-Performance: Olympia Bukkakis
-Set: Camille Lacadee
-Dramaturgy: Isabel Gatzke
-Sound: WARM collective (Caroline Ann Baur, Vanessà Heer, Tina Reden)
-Light: Ariel Efraim Ashbel
+Production & Concept: Olympia Bukkakis, Camille Lacadee, Isabel Gatzke  
+Performance: Olympia Bukkakis  
+Set: Camille Lacadee  
+Dramaturgy: Isabel Gatzke  
+Sound: WARM collective (Caroline Ann Baur, Vanessà Heer, Tina Reden)  
+Light: Ariel Efraim Ashbel  
 
 Performed at Gessnerallee as part of the Im/possible Spaces series. 
