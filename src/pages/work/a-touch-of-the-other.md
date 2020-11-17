@@ -9,9 +9,9 @@ video: "https://player.vimeo.com/video/466829136"
 photographer: "Mayra Wallraff"
 ---
 
-You know, people say everything happens for a reason. Well, that’s just a dreadful thing to say, I think, a stupid thing to say... And people say “why would this happen to you?” And I say “why wouldn’t it happen to me?” Because nobody’s special, nobody is... Good things happen to good people... And bad people... And bad things happen to everybody...  
+*You know, people say everything happens for a reason. Well, that’s just a dreadful thing to say, I think, a stupid thing to say... And people say “why would this happen to you?” And I say “why wouldn’t it happen to me?” Because nobody’s special, nobody is... Good things happen to good people... And bad people... And bad things happen to everybody...*  
 
-Leonie Hughes, Nurse, Mother, Grandmother, Aunty of Olympia Bukkakis. 
+*Leonie Hughes, Nurse, Mother, Grandmother, Aunty of Olympia Bukkakis.* 
 
 During a year of collective and personal trauma Olympia Bukkakis held 4 interviews with cisgender women in her family: her mother, two aunties and her little sister. They spoke about suffering, labour in and out of the home and perseverance. Olympia then worked with collaborators to develop performance material from these conversations, her own personal experiences and the objects and actions we engage with in everyday life.  
 
