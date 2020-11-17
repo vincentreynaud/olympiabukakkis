@@ -5,7 +5,7 @@ id: "work-on-progress"
 startDate: "2019-06-20"
 endDate: ""
 description: "A performative manifesto presented as part of The Present is Not Enough festival at Hebbel am Ufer (HAU)" 
-video: ""
+video: "https://vimeo.com/355959595"
 photographer: "Vincent Reynaud"
 ---
 
