@@ -17,5 +17,16 @@ During a year of collective and personal trauma Olympia Bukkakis held 4 intervie
 
 For A Touch of the Other Olympia draws on her background as a drag artist to explore the potential of this kind of performance to engage with the lived experiences and knowledges of women. The differences and overlaps between Bukkakis’ embodied existence as a trans drag performer and those of her cis female relatives from a white working class family in New Zealand are put into conversation with the traditional relationship between drag performance and the women that it ‘imitates’. In doing so she engages critically with the established tradition within drag performance of portraying working class women’s speech and mannerisms.  
 
-Olympia Bukkakis takes feminised labour as a site where (drag) performers and working women may find commonalities that can contribute to a solida- rity that transgresses sexual, gender and generational difference.
+Olympia Bukkakis takes feminised labour as a site where (drag) performers and working women may find commonalities that can contribute to a solidarity that transgresses sexual, gender and generational difference.
+
+Concept, Performance, Choreography: Olympia Bukkakis 
+Dramaturgy: Allison Wiltshire 
+Set, Video: Camille Lacadee 
+Light: Maika Knoblich 
+Sound: Lyra Pramuk 
+Costume: Jay Barry Matthews 
+Production: Lisa Gehring 
+Production Assistance: Paul Niedermeyer 
+Choreographic Assistance: Am Ertl
+Text: Mindy Grumley, Daisy Grumley, Leonie Hughes, Tracey Hughes
 
