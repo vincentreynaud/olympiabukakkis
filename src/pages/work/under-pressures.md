@@ -4,7 +4,7 @@ title: "Under Pressures"
 id: "under-pressures"
 startDate: "2019-12-13"
 endDate: ""
-description: "" 
+description: "A durational performance installation performed as part of Im/possible Spaces at Gessnerallee, Zürich." 
 video: ""
 photographer: "Betty Fleck"
 ---
