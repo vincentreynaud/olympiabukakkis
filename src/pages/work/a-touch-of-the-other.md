@@ -30,3 +30,4 @@ Production Assistance: Paul Niedermeyer
 Choreographic Assistance: Am Ertl 
 Text: Mindy Grumley, Daisy Grumley, Leonie Hughes, Tracey Hughes 
 
+Originally performed as part of the Risk & Resilience festival at Sophiensaele, Berlin. 
