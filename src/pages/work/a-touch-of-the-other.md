@@ -19,14 +19,14 @@ For A Touch of the Other Olympia draws on her background as a drag artist to exp
 
 Olympia Bukkakis takes feminised labour as a site where (drag) performers and working women may find commonalities that can contribute to a solidarity that transgresses sexual, gender and generational difference.
 
-Concept, Performance, Choreography: Olympia Bukkakis.  
-Dramaturgy: Allison Wiltshire.  
-Set, Video: Camille Lacadee.  
-Light: Maika Knoblich.  
-Sound: Lyra Pramuk.  
-Costume: Jay Barry Matthews.  
-Production: Lisa Gehring.  
-Production Assistance: Paul Niedermeyer.  
-Choreographic Assistance: Am Ertl. 
-Text: Mindy Grumley, Daisy Grumley, Leonie Hughes, Tracey Hughes. 
+Concept, Performance, Choreography: Olympia Bukkakis  
+Dramaturgy: Allison Wiltshire  
+Set, Video: Camille Lacadee  
+Light: Maika Knoblich  
+Sound: Lyra Pramuk  
+Costume: Jay Barry Matthews  
+Production: Lisa Gehring  
+Production Assistance: Paul Niedermeyer  
+Choreographic Assistance: Am Ertl 
+Text: Mindy Grumley, Daisy Grumley, Leonie Hughes, Tracey Hughes 
 
