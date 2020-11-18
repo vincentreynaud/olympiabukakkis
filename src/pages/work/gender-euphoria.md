@@ -4,7 +4,7 @@ title: "Gender Euphoria: Drag as a Construction Site for New Gender Realities"
 id: "gender-euphoria"
 startDate: "2019-01-18"
 endDate: ""
-description: "GENDER EUPHORIA has evolved through many forms. Originally conceived as a book chapter, then developed into a lecture, then a university presentation, and finally into a 90 minute drag/cabaret/lecture/dance hybrid, it is a critical discussion of gender, in drag." 
+description: "A 90 minute drag/cabaret/lecture/dance hybrid originally performed as part of Tanztage 2019 at Sophiensaele, Berlin." 
 video: "https://player.vimeo.com/video/312719664"
 photographer: "Gerhard F. Ludwig"
 ---
