@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import classnames from "classnames";
 
 class BtnCopy extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tooltip: null
-    };
-  }
-
+  state = {
+    tooltip: null
+  };
+  
   componentDidMount() {
     this.state.tooltip = document.querySelector(".tooltip");
   }
@@ -44,6 +40,7 @@ class BtnCopy extends Component {
         <button
           id="btn-copy"
           onClick={() => {
+            console.log(copyItem)
             this.toggle(this.state.tooltip);
             navigator.clipboard.writeText(copyItem).then(() => console.log("copied!"), err => console.error(err));
           }}

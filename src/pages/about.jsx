@@ -23,8 +23,8 @@ function About({ data }) {
               <small>Photography: {about.frontmatter.photographer}</small>
               <p className="contact">
                 Contact: <br />
-                <BtnCopy coptItem="mail@olympiabukkakis.com">
-                  <span>mail</span>
+                <BtnCopy copyItem="info@olympiabukkakis.com">
+                  <span>info</span>
                   <span className="text-nowrap">&#64;olympiabukkakis</span>
                   <span>.com</span>
                 </BtnCopy>
